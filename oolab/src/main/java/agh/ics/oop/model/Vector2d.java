@@ -9,42 +9,42 @@ public class Vector2d {
     }
 
     public int getXValue() {
-        return this.x;
+        return x;
     }
     public int getYValue() {
-        return this.y;
+        return y;
     }
 
     public String toString() {
-        return "(%d, %d)".formatted(this.x, this.y);
+        return "(%d, %d)".formatted(x, y);
     }
 
     public boolean precedes(Vector2d other) {
-        return (this.x<=other.x) && (this.y<=other.y); //czy w dobra strone porownanie
+        return (x<=other.x) && (y<=other.y); //czy w dobra strone porownanie
     }
 
     public boolean follows(Vector2d other) {
-        return (this.x>=other.x) && (this.y>=other.y);
+        return (x>=other.x) && (y>=other.y);
     }
 
     public Vector2d add(Vector2d other) {
-        return new Vector2d(this.x+other.x, this.y+other.y);
+        return new Vector2d(x+other.x, y+other.y);
     }
 
     public Vector2d subtract(Vector2d other) {
-        return new Vector2d(this.x-other.x, this.y-other.y);
+        return new Vector2d(x-other.x, y-other.y);
     }
 
     public Vector2d upperRight(Vector2d other) {
-        return new Vector2d(Math.max(this.x, other.x), Math.max(this.y, other.y));
+        return new Vector2d(Math.max(x, other.x), Math.max(y, other.y));
     }
 
     public Vector2d lowerLeft(Vector2d other) {
-        return new Vector2d(Math.min(this.x, other.x), Math.min(this.y, other.y));
+        return new Vector2d(Math.min(x, other.x), Math.min(y, other.y));
     }
 
     public Vector2d opposite() {
-        return new Vector2d(this.x*(-1), this.y*(-1));
+        return new Vector2d(x*(-1), y*(-1));
     }
 
     public boolean equals(Object other) { //hash code i czy mozna poprawic tworzenie nowego vectora
@@ -56,6 +56,6 @@ public class Vector2d {
             return false;
 
         Vector2d castedOther = (Vector2d) other;
-        return (this.x == castedOther.x) && (this.y == castedOther.y);
+        return (x == castedOther.x) && (y == castedOther.y);
     }
 }
