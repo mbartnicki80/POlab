@@ -3,10 +3,6 @@ import agh.ics.oop.model.MapDirection;
 import agh.ics.oop.model.MoveDirection;
 import agh.ics.oop.model.Vector2d;
 
-import java.util.Map;
-
-import static agh.ics.oop.model.MapDirection.NORTH;
-
 public class World {
     static void start() {
         System.out.println("System wystartowal");
