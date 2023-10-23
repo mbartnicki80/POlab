@@ -3,7 +3,7 @@ package agh.ics.oop.model;
 public class Vector2d {
     private final int x;
     private final int y;
-    public Vector2d(int x, int y) { //czy musi być public?
+    public Vector2d(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -20,7 +20,7 @@ public class Vector2d {
     }
 
     public boolean precedes(Vector2d other) {
-        return (x<=other.x) && (y<=other.y); //czy w dobra strone porownanie
+        return (x<=other.x) && (y<=other.y);
     }
 
     public boolean follows(Vector2d other) {
@@ -47,15 +47,21 @@ public class Vector2d {
         return new Vector2d(x*(-1), y*(-1));
     }
 
-    public boolean equals(Object other) { //hash code i czy mozna poprawic tworzenie nowego vectora
+    public boolean equals(Object other) {
 
         if (other == this)
             return true;
 
-        if (!(other instanceof Vector2d))
+        if (!(other instanceof Vector2d that))
             return false;
 
-        Vector2d castedOther = (Vector2d) other;
-        return (x == castedOther.x) && (y == castedOther.y);
+        return (that.x == x) && (that.y == y);
     }
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + Integer.hashCode(x);
+        result = 31 * result + Integer.hashCode(y);
+        return result;
+    }
+
 }

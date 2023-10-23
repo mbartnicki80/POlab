@@ -3,7 +3,7 @@ package agh.ics.oop;
 import agh.ics.oop.model.MoveDirection;
 
 public class OptionsParser {
-    public static void convertStringToMoveDirection(String[] args) {
+    public static MoveDirection[] convertStringToMoveDirection(String[] args) {
         int tabLength = 0;
         for (String arg : args)
             if (arg.equals("f") || arg.equals("b") || arg.equals("r") || arg.equals("l"))
@@ -19,9 +19,6 @@ public class OptionsParser {
                 case "l" -> direction[j++] = MoveDirection.LEFT;
             }
         }
-
-    }
-    public static void main(String[] args) {
-        convertStringToMoveDirection(args);
+        return direction;
     }
 }
