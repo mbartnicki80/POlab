@@ -3,24 +3,28 @@ package agh.ics.oop.model;
 import agh.ics.oop.OptionsParser;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class OptionsParserTest {
     @Test
     public void optionsParserTest() {
-        MoveDirection[] directions1 = {MoveDirection.FORWARD, MoveDirection.BACKWARD, MoveDirection.RIGHT, MoveDirection.LEFT};
+        List<MoveDirection> directions1 = new ArrayList<>(Arrays.asList(MoveDirection.FORWARD, MoveDirection.BACKWARD, MoveDirection.RIGHT, MoveDirection.LEFT));
         String[] input1 = {"f", "b", "r", "l"};
-        MoveDirection[] directions2 = {};
+        List<MoveDirection> directions2 = new ArrayList<>(List.of());
         String[] input2 = {"a", "c", "d", "e"};
-        MoveDirection[] directions3 = {};
+        List<MoveDirection> directions3 = new ArrayList<>(List.of());
         String[] input3 = {};
-        MoveDirection[] directions4 = {MoveDirection.FORWARD, MoveDirection.BACKWARD, MoveDirection.RIGHT};
+        List<MoveDirection> directions4 = new ArrayList<>(Arrays.asList(MoveDirection.FORWARD, MoveDirection.BACKWARD, MoveDirection.RIGHT));
         String[] input4 = {"f", "a", "b", "c", "r"};
 
-        assertArrayEquals(directions1, OptionsParser.convertStringToMoveDirection(input1));
-        assertArrayEquals(directions2, OptionsParser.convertStringToMoveDirection(input2));
-        assertArrayEquals(directions3, OptionsParser.convertStringToMoveDirection(input3));
-        assertArrayEquals(directions4, OptionsParser.convertStringToMoveDirection(input4));
+        assertArrayEquals(directions1.toArray(), OptionsParser.convertStringToMoveDirection(input1).toArray());
+        assertArrayEquals(directions2.toArray(), OptionsParser.convertStringToMoveDirection(input2).toArray());
+        assertArrayEquals(directions3.toArray(), OptionsParser.convertStringToMoveDirection(input3).toArray());
+        assertArrayEquals(directions4.toArray(), OptionsParser.convertStringToMoveDirection(input4).toArray());
 
     }
 }
