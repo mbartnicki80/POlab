@@ -1,8 +1,10 @@
 package agh.ics.oop;
-import agh.ics.oop.model.Animal;
-import agh.ics.oop.model.MapDirection;
 import agh.ics.oop.model.MoveDirection;
 import agh.ics.oop.model.Vector2d;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class World {
     static void start() {
@@ -23,9 +25,18 @@ public class World {
     }
 
     public static void main(String[] args) {
+        /*
+        Komentarz do zadania 7
+        Lepiej wykorzystać ArrayList, gdyż najczęściej korzystałem z metody .get(), która służy do pozyskania elementu z danego indeksu.
+        Najszybciej wykonuje się to na ArrayList, gdyż jego implementacja oparta jest o tablicę. Oprócz tego, ArrayList jest po prostu szybszy
+        od LinkedList.
+         */
         start();
-        Animal animal = new Animal();
-        System.out.println(animal);
+        List<MoveDirection> directions;
+        directions = OptionsParser.convertStringToMoveDirection(args);
+        ArrayList<Vector2d> positions = new ArrayList<Vector2d>(Arrays.asList(new Vector2d(2,2), new Vector2d(3,4)));
+        Simulation simulation = new Simulation(positions, directions);
+        simulation.run();
         stop();
     }
 }

@@ -2,7 +2,7 @@ package agh.ics.oop.model;
 public enum MapDirection {
     NORTH, EAST, SOUTH, WEST;
     public String toString() {
-        String[] directions = {"Polnoc", "Poludnie", "Zachod", "Wschod"};
+        String[] directions = {"Polnoc", "Wschod", "Poludnie", "Zachod"};
         return directions[(this.ordinal())%(directions.length)];
     }
     public MapDirection next() {

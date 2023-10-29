@@ -19,17 +19,17 @@ public class Animal {
     public void move(MoveDirection direction) {
         switch (direction) {
             case FORWARD -> {
-                Vector2d newPosition = this.position.add(this.orientation.toUnitVector());
-                if ((Math.abs(newPosition.getXValue()) < 5) && (Math.abs(newPosition.getYValue()) < 5))
-                    this.position = this.position.add(this.orientation.toUnitVector());
+                Vector2d newPosition = position.add(orientation.toUnitVector());
+                if ((newPosition.getXValue() < 5 && newPosition.getXValue() >= 0) && (newPosition.getYValue() < 5 && newPosition.getYValue() >= 0))
+                    position = position.add(orientation.toUnitVector());
             }
             case BACKWARD -> {
-                Vector2d newPosition = this.position.subtract(this.orientation.toUnitVector());
-                if ((Math.abs(newPosition.getXValue()) < 5) && (Math.abs(newPosition.getYValue()) < 5))
-                    this.position = this.position.subtract(this.orientation.toUnitVector());
+                Vector2d newPosition = position.subtract(orientation.toUnitVector());
+                if ((newPosition.getXValue() < 5 && newPosition.getXValue() >= 0) && (newPosition.getYValue() < 5 && newPosition.getYValue() >= 0))
+                    position = position.subtract(orientation.toUnitVector());
             }
-            case RIGHT -> this.orientation = this.orientation.next();
-            case LEFT -> this.orientation = this.orientation.previous();
+            case RIGHT -> orientation = orientation.next();
+            case LEFT -> orientation = orientation.previous();
         }
     }
 }
