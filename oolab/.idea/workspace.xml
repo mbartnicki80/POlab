@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" afterDir="false" />
-    </list>
+    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="repaired MapDirection, finished Simulation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +64,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.World">
+  <component name="RunManager" selected="Gradle.OptionsParserTest (1)">
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
       <module name="oolab.main" />
@@ -89,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OptionsParserTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -102,7 +92,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.MapDirectionTest&quot;" />
+            <option value="&quot;agh.ics.oop.OptionsParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -187,18 +177,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.MapDirectionTest" />
+      <item itemvalue="Gradle.OptionsParserTest (1)" />
       <item itemvalue="Gradle.OptionsParserTest" />
       <item itemvalue="Gradle.OptionsParserTest.optionsParserTest" />
       <item itemvalue="Gradle.Vector2dTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OptionsParserTest (1)" />
         <item itemvalue="Gradle.OptionsParserTest" />
         <item itemvalue="Gradle.OptionsParserTest.optionsParserTest" />
         <item itemvalue="Application.World" />
         <item itemvalue="Gradle.Vector2dTest" />
-        <item itemvalue="Gradle.MapDirectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +215,7 @@
       <workItem from="1698592383643" duration="17000" />
       <workItem from="1698594558429" duration="3583000" />
       <workItem from="1698598407629" duration="3945000" />
-      <workItem from="1698615966046" duration="2051000" />
+      <workItem from="1698615966046" duration="2391000" />
     </task>
     <task id="LOCAL-00001" summary="Removed old run method, edited Vector2d">
       <option name="closed" value="true" />
@@ -259,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698597673898</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="repaired MapDirection, finished Simulation">
+      <option name="closed" value="true" />
+      <created>1698618354349</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698618354349</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +268,8 @@
     <MESSAGE value="MapDirectionTest added" />
     <MESSAGE value="Some files added" />
     <MESSAGE value="Added new Vector2d tests, optimized MapDirection methods, changed OptionsParser, added Animal class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new Vector2d tests, optimized MapDirection methods, changed OptionsParser, added Animal class" />
+    <MESSAGE value="repaired MapDirection, finished Simulation" />
+    <option name="LAST_COMMIT_MESSAGE" value="repaired MapDirection, finished Simulation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
