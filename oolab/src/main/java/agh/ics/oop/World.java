@@ -7,12 +7,15 @@ import java.util.Arrays;
 import java.util.List;
 
 public class World {
+
     static void start() {
         System.out.println("System wystartowal");
     }
+
     static void stop() {
         System.out.println("System zakonczyl dzialanie");
     }
+
     static void run(MoveDirection[] directions) {
         for (MoveDirection direction : directions) {
             switch (direction) {

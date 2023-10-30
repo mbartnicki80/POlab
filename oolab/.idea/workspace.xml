@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="repaired MapDirection, finished Simulation" />
+    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="changed OptionsParserTest directory">
+      <change afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +72,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="agh.ics.oop" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.OptionsParserTest (1)">
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
@@ -215,7 +228,10 @@
       <workItem from="1698592383643" duration="17000" />
       <workItem from="1698594558429" duration="3583000" />
       <workItem from="1698598407629" duration="3945000" />
-      <workItem from="1698615966046" duration="2391000" />
+      <workItem from="1698615966046" duration="2842000" />
+      <workItem from="1698619062299" duration="186000" />
+      <workItem from="1698619339258" duration="14000" />
+      <workItem from="1698695388572" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="Removed old run method, edited Vector2d">
       <option name="closed" value="true" />
@@ -257,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698618354349</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed OptionsParserTest directory">
+      <option name="closed" value="true" />
+      <created>1698618502551</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698618502551</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +293,8 @@
     <MESSAGE value="Some files added" />
     <MESSAGE value="Added new Vector2d tests, optimized MapDirection methods, changed OptionsParser, added Animal class" />
     <MESSAGE value="repaired MapDirection, finished Simulation" />
-    <option name="LAST_COMMIT_MESSAGE" value="repaired MapDirection, finished Simulation" />
+    <MESSAGE value="changed OptionsParserTest directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed OptionsParserTest directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
