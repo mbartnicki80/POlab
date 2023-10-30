@@ -1,14 +1,11 @@
 package agh.ics.oop;
 
-import agh.ics.oop.OptionsParser;
 import agh.ics.oop.model.MoveDirection;
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 public class OptionsParserTest {
     @Test
@@ -22,10 +19,10 @@ public class OptionsParserTest {
         List<MoveDirection> directions4 = new ArrayList<>(Arrays.asList(MoveDirection.FORWARD, MoveDirection.BACKWARD, MoveDirection.RIGHT));
         String[] input4 = {"f", "a", "b", "c", "r"};
 
-        assertArrayEquals(directions1.toArray(), OptionsParser.convertStringToMoveDirection(input1).toArray());
-        assertArrayEquals(directions2.toArray(), OptionsParser.convertStringToMoveDirection(input2).toArray());
-        assertArrayEquals(directions3.toArray(), OptionsParser.convertStringToMoveDirection(input3).toArray());
-        assertArrayEquals(directions4.toArray(), OptionsParser.convertStringToMoveDirection(input4).toArray());
+        assertIterableEquals(directions1, OptionsParser.convertStringToMoveDirection(input1));
+        assertIterableEquals(directions2, OptionsParser.convertStringToMoveDirection(input2));
+        assertIterableEquals(directions3, OptionsParser.convertStringToMoveDirection(input3));
+        assertIterableEquals(directions4, OptionsParser.convertStringToMoveDirection(input4));
 
     }
 }

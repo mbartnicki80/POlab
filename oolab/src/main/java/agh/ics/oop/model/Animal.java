@@ -14,6 +14,14 @@ public class Animal {
         this(new Vector2d(2, 2));
     }
 
+    public MapDirection getOrientation() {
+        return orientation;
+    }
+
+    public Vector2d getPosition() {
+        return position;
+    }
+
     public String toString() {
         return position.toString() + " " + orientation;
     }
@@ -24,15 +32,10 @@ public class Animal {
 
     public void move(MoveDirection direction) {
         switch (direction) {
-            case FORWARD -> {
-                Vector2d newPosition = position.add(orientation.toUnitVector());
+            case FORWARD, BACKWARD -> {
+                Vector2d newPosition = direction == MoveDirection.FORWARD ? position.add(orientation.toUnitVector()) : position.subtract(orientation.toUnitVector());
                 if ((newPosition.getXValue() < 5 && newPosition.getXValue() >= 0) && (newPosition.getYValue() < 5 && newPosition.getYValue() >= 0))
-                    position = position.add(orientation.toUnitVector());
-            }
-            case BACKWARD -> {
-                Vector2d newPosition = position.subtract(orientation.toUnitVector());
-                if ((newPosition.getXValue() < 5 && newPosition.getXValue() >= 0) && (newPosition.getYValue() < 5 && newPosition.getYValue() >= 0))
-                    position = position.subtract(orientation.toUnitVector());
+                    position = newPosition;
             }
             case RIGHT -> orientation = orientation.next();
             case LEFT -> orientation = orientation.previous();

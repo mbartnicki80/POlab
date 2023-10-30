@@ -9,8 +9,12 @@ import java.util.List;
 
 public class Simulation {
 
-    private List<Animal> animals;
-    private List<MoveDirection> moves;
+    private final List<Animal> animals;
+    private final List<MoveDirection> moves;
+
+    public List<Animal> getAnimalsList() {
+        return animals;
+    }
 
     public Simulation(List<Vector2d> positions, List<MoveDirection> moves) {
         this.moves = moves;
@@ -20,13 +24,11 @@ public class Simulation {
     }
 
     public void run() {
-        int modulo = animals.size();
+        int animalsSize = animals.size();
 
         for (int i=0; i<moves.size(); i++) {
-            Animal newAnimal = animals.get(i%modulo);
-            newAnimal.move(moves.get(i));
-            animals.set(i%modulo, newAnimal);
-            System.out.println("Zwierzę " + i%modulo + ": " + newAnimal);
+            animals.get(i % animalsSize).move(moves.get(i));
+            System.out.println("Zwierze " + i % animalsSize + ": " + animals.get(i % animalsSize).toString().split(" ")[0]);
         }
     }
 }
