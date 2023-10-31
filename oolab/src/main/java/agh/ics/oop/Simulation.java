@@ -13,7 +13,7 @@ public class Simulation {
     private final List<Animal> animals;
     private final List<MoveDirection> moves;
 
-    public List<Animal> getAnimalsList() {
+    List<Animal> getAnimalsList() {
         return Collections.unmodifiableList(animals);
     }
 
