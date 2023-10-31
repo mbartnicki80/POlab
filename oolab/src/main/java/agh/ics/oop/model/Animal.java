@@ -3,8 +3,8 @@ package agh.ics.oop.model;
 public class Animal {
     private static final Vector2d UPPER_RIGHT = new Vector2d(4, 4);
     private static final Vector2d LOWER_LEFT = new Vector2d(0, 0);
-    private MapDirection orientation;
-    private Vector2d position;
+    public MapDirection orientation;
+    public Vector2d position;
 
     public Animal(Vector2d position) {
         this.orientation = MapDirection.NORTH;
