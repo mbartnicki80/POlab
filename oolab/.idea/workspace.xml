@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="changed OptionsParserTest directory">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/OptionsParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/OptionsParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/MapDirection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/Vector2d.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/model/Vector2d.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Vector2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionsParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/OptionsParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="added getters to Animal class, optimized run method in Simulation, added Simulation tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -245,7 +223,7 @@
       <workItem from="1698619062299" duration="186000" />
       <workItem from="1698619339258" duration="14000" />
       <workItem from="1698695388572" duration="13000" />
-      <workItem from="1698696040168" duration="4197000" />
+      <workItem from="1698696040168" duration="4483000" />
     </task>
     <task id="LOCAL-00001" summary="Removed old run method, edited Vector2d">
       <option name="closed" value="true" />
@@ -295,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698618502551</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added getters to Animal class, optimized run method in Simulation, added Simulation tests">
+      <option name="closed" value="true" />
+      <created>1698700379738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698700379738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +294,8 @@
     <MESSAGE value="Added new Vector2d tests, optimized MapDirection methods, changed OptionsParser, added Animal class" />
     <MESSAGE value="repaired MapDirection, finished Simulation" />
     <MESSAGE value="changed OptionsParserTest directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed OptionsParserTest directory" />
+    <MESSAGE value="added getters to Animal class, optimized run method in Simulation, added Simulation tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getters to Animal class, optimized run method in Simulation, added Simulation tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

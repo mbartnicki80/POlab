@@ -36,7 +36,7 @@ public class SimulationTest {
 
         Simulation simulation = new Simulation(positions, convertedMoves);
         simulation.run();
-        List<Animal> animalsList = Collections.unmodifiableList(simulation.getAnimalsList());
+        List<Animal> animalsList = simulation.getAnimalsList();
         List<MapDirection> expectedOrientations = List.of(MapDirection.WEST,MapDirection.WEST,MapDirection.EAST);
         List<Vector2d> expectedPositions = List.of(new Vector2d(2, 4), new Vector2d(0, 0), new Vector2d(2, 3));
 
