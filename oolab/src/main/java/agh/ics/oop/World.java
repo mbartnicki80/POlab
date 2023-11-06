@@ -32,7 +32,7 @@ public class World {
         start();
         List<MoveDirection> directions;
         directions = OptionsParser.convertStringToMoveDirection(args);
-        ArrayList<Vector2d> positions = new ArrayList<Vector2d>(Arrays.asList(new Vector2d(2,2), new Vector2d(3,4)));
+        ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 4)));
         RectangularMap worldMap = new RectangularMap(5, 5);
         Simulation simulation = new Simulation(positions, directions, worldMap);
         simulation.run();
