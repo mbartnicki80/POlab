@@ -9,12 +9,14 @@ public class RectangularMap implements WorldMap {
     private final Map<Vector2d, Animal> animals = new HashMap<>();
     private int width;
     private int height;
-    private final Vector2d upperRight = new Vector2d(width-1, height-1);
-    private final Vector2d lowerLeft = new Vector2d(0, 0);
+    private final Vector2d upperRight;
+    private final Vector2d lowerLeft;
 
     public RectangularMap(int width, int height) {
         this.width = width;
         this.height = height;
+        upperRight = new Vector2d(width-1, height-1);
+        lowerLeft = new Vector2d(0, 0);
     }
 
     @Override

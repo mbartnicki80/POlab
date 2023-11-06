@@ -22,7 +22,7 @@ public class Animal {
     }
 
     public String toString() {
-        return position + " " + orientation;
+        return orientation.toString();
     }
 
     public boolean isAt(Vector2d position) {
