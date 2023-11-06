@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class RectangularMap implements WorldMap {
     private final Map<Vector2d, Animal> animals = new HashMap<>();
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
     private final Vector2d upperRight;
     private final Vector2d lowerLeft;
 

@@ -36,7 +36,8 @@ public class SimulationTest {
         List<Animal> animalsList = simulation.getAnimalsList();
         List<MapDirection> expectedOrientations = List.of(MapDirection.WEST,MapDirection.WEST,MapDirection.EAST);
         List<Vector2d> expectedPositions = List.of(new Vector2d(2, 4), new Vector2d(0, 0), new Vector2d(2, 3));
-
+        assertNull(worldMap.objectAt(new Vector2d(3, 4)));
+        assertNull(worldMap.objectAt(new Vector2d(2, 2)));
 
         for(int i=0; i<expectedOrientations.size(); i++) {
             assertEquals(expectedOrientations.get(i), animalsList.get(i).getOrientation());
@@ -46,8 +47,6 @@ public class SimulationTest {
 
             assertFalse(worldMap.place(new Animal(expectedPositions.get(i))));
             assertNotNull(worldMap.objectAt(expectedPositions.get(i)));
-            assertNull(worldMap.objectAt(new Vector2d(3, 4)));
-            assertNull(worldMap.objectAt(new Vector2d(2, 2)));
         }
     }
 }
