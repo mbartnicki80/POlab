@@ -1,14 +1,16 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.MapVisualizer;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class RectangularMap implements WorldMap {
     private final Map<Vector2d, Animal> animals = new HashMap<>();
-    private final int width;
-    private final int height;
-    private final Vector2d UPPER_RIGHT = new Vector2d(width, height);
-    private final Vector2d LOWER_LEFT = new Vector2d(0, 0);
+    private int width;
+    private int height;
+    private final Vector2d upperRight = new Vector2d(width-1, height-1);
+    private final Vector2d lowerLeft = new Vector2d(0, 0);
 
     public RectangularMap(int width, int height) {
         this.width = width;
@@ -17,26 +19,24 @@ public class RectangularMap implements WorldMap {
 
     @Override
     public boolean canMoveTo(Vector2d position) {
-        return ((position.precedes(UPPER_RIGHT)) && (position.follows(LOWER_LEFT)));
+        return (position.precedes(upperRight) && position.follows(lowerLeft)) && (!isOccupied(position));
     }
 
     @Override
     public boolean place(Animal animal) {
+        if (canMoveTo(animal.getPosition())) {
+            animals.put(animal.getPosition(), animal);
+            return true;
+        }
         return false;
     }
 
     @Override
     public void move(Animal animal, MoveDirection direction) {
-        switch (direction) {
-            case FORWARD, BACKWARD -> {
-                Vector2d newPosition =
-                        direction == MoveDirection.FORWARD ? animal.getPosition().add(animal.getOrientation().toUnitVector())
-                        : animal.getPosition().subtract(animal.getOrientation().toUnitVector());
-                if ((newPosition.precedes(UPPER_RIGHT)) && (newPosition.follows(LOWER_LEFT)))
-                    animal.position = newPosition;
-            }
-            case RIGHT -> animal.orientation = animal.orientation.next();
-            case LEFT -> animal.orientation = animal.orientation.previous();
+        if (isOccupied(animal.getPosition())) {
+            animals.remove(animal.getPosition());
+            animal.move(direction, this);
+            animals.put(animal.getPosition(), animal);
         }
     }
 
@@ -52,6 +52,7 @@ public class RectangularMap implements WorldMap {
 
     @Override
     public String toString() {
-        return super.toString();
+        MapVisualizer mapVisualizer = new MapVisualizer(this);
+        return mapVisualizer.draw(lowerLeft, upperRight);
     }
 }

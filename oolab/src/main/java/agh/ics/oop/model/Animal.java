@@ -1,8 +1,6 @@
 package agh.ics.oop.model;
 
 public class Animal {
-    private static final Vector2d UPPER_RIGHT = new Vector2d(4, 4);
-    private static final Vector2d LOWER_LEFT = new Vector2d(0, 0);
     public MapDirection orientation;
     public Vector2d position;
 
@@ -24,18 +22,18 @@ public class Animal {
     }
 
     public String toString() {
-        return position.toString() + " " + orientation;
+        return position + " " + orientation;
     }
 
     public boolean isAt(Vector2d position) {
         return this.position.equals(position);
     }
 
-    public void move(MoveDirection direction) {
+    public void move(MoveDirection direction, MoveValidator moveValidator) {
         switch (direction) {
             case FORWARD, BACKWARD -> {
                 Vector2d newPosition = direction == MoveDirection.FORWARD ? position.add(orientation.toUnitVector()) : position.subtract(orientation.toUnitVector());
-                if ((newPosition.precedes(UPPER_RIGHT)) && (newPosition.follows(LOWER_LEFT)))
+                if (moveValidator.canMoveTo(newPosition))
                     position = newPosition;
             }
             case RIGHT -> orientation = orientation.next();
