@@ -9,6 +9,7 @@ public class RectangularMap implements WorldMap {
     private final Map<Vector2d, Animal> animals = new HashMap<>();
     private final Vector2d upperRight;
     private final Vector2d lowerLeft;
+    MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public RectangularMap(int width, int height) {
         upperRight = new Vector2d(width-1, height-1);
@@ -50,7 +51,6 @@ public class RectangularMap implements WorldMap {
 
     @Override
     public String toString() {
-        MapVisualizer mapVisualizer = new MapVisualizer(this);
         return mapVisualizer.draw(lowerLeft, upperRight);
     }
 }
