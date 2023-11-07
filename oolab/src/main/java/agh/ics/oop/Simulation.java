@@ -21,8 +21,9 @@ public class Simulation {
         this.worldMap = worldMap;
         animals = new ArrayList<>();
         for (Vector2d position : positions) {
-            if (worldMap.place(new Animal(position)))
-                animals.add(new Animal(position));
+            Animal newAnimal = new Animal(position);
+            if (worldMap.place(newAnimal))
+                animals.add(newAnimal);
         }
 
     }
