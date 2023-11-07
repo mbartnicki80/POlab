@@ -4,47 +4,35 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class GrassField implements WorldMap {
+public class GrassField extends RectangularMap {
     private final int grassQuantity;
-    private final Map<Vector2d, Animal> animals = new HashMap<>();
+    private final Map<Vector2d, Animal> animals = new HashMap<>(); //dziedziczenie
     private final Map<Vector2d, Grass> grass = new HashMap<>();
 
-    public GrassField(int grassQuantity) {
+    public GrassField(int grassQuantity) { //todo
         this.grassQuantity = grassQuantity;
+        generateGrass();
+    }
+
+    public void generateGrass() {
         Random rn = new Random();
         int n = (int) (Math.sqrt(grassQuantity*10)+1);
         for (int i=0; i<grassQuantity; i++) {
-            int x = rn.nextInt(n);
-            int y = rn.nextInt(n);
-            if (!isOccupied(new Vector2d(x, y)))
-
+            Vector2d newPosition = new Vector2d(rn.nextInt(n), rn.nextInt(n));
+            if (!isOccupied(newPosition))
+                grass.put(newPosition, new Grass(newPosition));
+            else
+                i--;
         }
-
-
-    }
-
-    @Override
-    public boolean canMoveTo(Vector2d position) {
-        return false;
-    }
-
-    @Override
-    public boolean place(Animal animal) {
-        return false;
-    }
-
-    @Override
-    public void move(Animal animal, MoveDirection direction) {
-
     }
 
     @Override
     public boolean isOccupied(Vector2d position) {
-        return false;
+        return (animals.containsKey(position) || grass.containsKey(position));
     }
 
     @Override
     public WorldElement objectAt(Vector2d position) {
         return null;
-    }
+    } //todo
 }
