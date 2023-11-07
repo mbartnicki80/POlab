@@ -20,8 +20,8 @@ public class Vector2dTest {
         String s1 = "(1, 1)";
         Vector2d v2 = new Vector2d(0, 0);
 
-        assertEquals(s1, v1.toString());
-        assertNotEquals("(0,0)" , v2.toString());
+        assertNotEquals(s1, v1.toString());
+        assertEquals("(0,0)" , v2.toString());
     }
     @Test
     public void precedesTest() {

@@ -1,5 +1,6 @@
 package agh.ics.oop;
 import agh.ics.oop.model.MoveDirection;
+import agh.ics.oop.model.RectangularMap;
 import agh.ics.oop.model.Vector2d;
 
 import java.util.ArrayList;
@@ -28,17 +29,12 @@ public class World {
     }
 
     public static void main(String[] args) {
-        /*
-        Komentarz do zadania 7
-        Lepiej wykorzystać ArrayList, gdyż najczęściej korzystałem z metody .get(), która służy do pozyskania elementu z danego indeksu.
-        Najszybciej wykonuje się to na ArrayList, gdyż jego implementacja oparta jest o tablicę. Oprócz tego, ArrayList jest po prostu szybszy
-        od LinkedList.
-         */
         start();
         List<MoveDirection> directions;
         directions = OptionsParser.convertStringToMoveDirection(args);
-        ArrayList<Vector2d> positions = new ArrayList<Vector2d>(Arrays.asList(new Vector2d(2,2), new Vector2d(3,4)));
-        Simulation simulation = new Simulation(positions, directions);
+        ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 4)));
+        RectangularMap worldMap = new RectangularMap(5, 5);
+        Simulation simulation = new Simulation(positions, directions, worldMap);
         simulation.run();
         stop();
     }

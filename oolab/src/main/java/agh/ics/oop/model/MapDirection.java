@@ -3,13 +3,13 @@ public enum MapDirection {
 
     NORTH, EAST, SOUTH, WEST;
 
-    private static final Vector2d NORTHVECTOR = new Vector2d(0, 1);
-    private static final Vector2d EASTVECTOR = new Vector2d(1, 0);
-    private static final Vector2d SOUTHVECTOR = new Vector2d(0, -1);
-    private static final Vector2d WESTVECTOR = new Vector2d(-1, 0);
+    private static final Vector2d NORTH_VECTOR = new Vector2d(0, 1);
+    private static final Vector2d EAST_VECTOR = new Vector2d(1, 0);
+    private static final Vector2d SOUTH_VECTOR = new Vector2d(0, -1);
+    private static final Vector2d WEST_VECTOR = new Vector2d(-1, 0);
 
     public String toString() {
-        String[] directions = {"Polnoc", "Wschod", "Poludnie", "Zachod"};
+        String[] directions = {"N", "E", "S", "W"};
         return directions[(this.ordinal())%(directions.length)];
     }
 
@@ -24,10 +24,10 @@ public enum MapDirection {
     }
     public Vector2d toUnitVector() {
         return switch (this) {
-            case NORTH -> NORTHVECTOR;
-            case SOUTH -> SOUTHVECTOR;
-            case WEST -> WESTVECTOR;
-            case EAST -> EASTVECTOR;
+            case NORTH -> NORTH_VECTOR;
+            case SOUTH -> SOUTH_VECTOR;
+            case WEST -> WEST_VECTOR;
+            case EAST -> EAST_VECTOR;
         };
     }
 }
