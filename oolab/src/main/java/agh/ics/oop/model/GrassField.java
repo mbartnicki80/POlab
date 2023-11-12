@@ -4,18 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class GrassField extends RectangularMap {
-    private final int grassQuantity;
-    private final Map<Vector2d, Animal> animals = new HashMap<>(); //dziedziczenie
+public class GrassField extends AbstractWorldMap {
     private final Map<Vector2d, Grass> grass = new HashMap<>();
+    private Vector2d upperRight;
+    private Vector2d lowerLeft; //wymyslic obliczanie rogow
+    Random rn = new Random();
 
-    public GrassField(int grassQuantity) { //todo
-        this.grassQuantity = grassQuantity;
-        generateGrass();
+    public GrassField(int grassQuantity) {
+        generateGrass(grassQuantity);
     }
 
-    public void generateGrass() {
-        Random rn = new Random();
+    public void generateGrass(int grassQuantity) {
         int n = (int) (Math.sqrt(grassQuantity*10)+1);
         for (int i=0; i<grassQuantity; i++) {
             Vector2d newPosition = new Vector2d(rn.nextInt(n), rn.nextInt(n));
@@ -27,12 +26,32 @@ public class GrassField extends RectangularMap {
     }
 
     @Override
+    public boolean canMoveTo(Vector2d position) {
+        return isOccupied(position);
+    }
+
+    @Override
+    public boolean place(Animal animal) {
+        return super.place(animal);
+    }
+
+    @Override
+    public void move(Animal animal, MoveDirection direction) {
+        super.move(animal, direction);
+    }
+
+    @Override
     public boolean isOccupied(Vector2d position) {
-        return (animals.containsKey(position) || grass.containsKey(position));
+        return (super.isOccupied(position) || grass.containsKey(position));
     }
 
     @Override
     public WorldElement objectAt(Vector2d position) {
-        return null;
-    } //todo
+        return super.objectAt(position);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString(lowerLeft, upperRight);
+    }
 }

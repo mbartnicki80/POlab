@@ -1,6 +1,6 @@
 package agh.ics.oop.model;
 
-public class Grass { //implements worldElement
+public class Grass implements WorldElement {
     private final Vector2d position;
 
     public Grass(Vector2d position) {
@@ -8,10 +8,15 @@ public class Grass { //implements worldElement
     }
 
     public Vector2d getPosition() {
-        return position; //immutable?
+        return position;
     }
 
     public String toString() {
         return "*";
+    }
+
+    @Override
+    public boolean isAt(Vector2d position) { //czy to jest ok?
+        return this.position.equals(position);
     }
 }
