@@ -2,8 +2,7 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.MapVisualizer;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public abstract class AbstractWorldMap implements WorldMap {
     protected final Map<Vector2d, WorldElement> animals = new HashMap<>();
@@ -34,6 +33,10 @@ public abstract class AbstractWorldMap implements WorldMap {
 
     public WorldElement objectAt(Vector2d position) {
         return animals.getOrDefault(position, null);
+    }
+
+    public ArrayList<WorldElement> getElements() {
+        return new ArrayList<>(animals.values());
     }
 
     public String toString(Vector2d lowerLeft, Vector2d upperRight) {
