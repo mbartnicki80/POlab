@@ -100,21 +100,8 @@
       <recent name="agh.ics.oop" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.World">
-    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
-      <module name="oolab.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.ics.oop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SimulationTest">
+    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,7 +114,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.MapDirectionTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OptionsParserTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.OptionsParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,7 +173,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RectangularMapTest.moveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SimulationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -175,7 +186,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest.moveTest&quot;" />
+            <option value="&quot;agh.ics.oop.SimulationTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -186,7 +197,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RectangularMapTest.placeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Vector2dTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -199,7 +210,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.RectangularMapTest.placeTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.Vector2dTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -211,19 +222,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.RectangularMapTest" />
+      <item itemvalue="Gradle.MapDirectionTest" />
+      <item itemvalue="Gradle.OptionsParserTest (1)" />
+      <item itemvalue="Gradle.SimulationTest" />
+      <item itemvalue="Gradle.Vector2dTest" />
       <item itemvalue="Gradle.RectangularMapTest.isOccupiedTest" />
-      <item itemvalue="Gradle.RectangularMapTest.moveTest" />
-      <item itemvalue="Gradle.RectangularMapTest.placeTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.World" />
-        <item itemvalue="Gradle.RectangularMapTest" />
-        <item itemvalue="Gradle.RectangularMapTest.placeTest" />
-        <item itemvalue="Gradle.RectangularMapTest.moveTest" />
+        <item itemvalue="Gradle.SimulationTest" />
+        <item itemvalue="Gradle.OptionsParserTest (1)" />
+        <item itemvalue="Gradle.Vector2dTest" />
         <item itemvalue="Gradle.RectangularMapTest.isOccupiedTest" />
+        <item itemvalue="Gradle.MapDirectionTest" />
       </list>
     </recent_temporary>
   </component>
