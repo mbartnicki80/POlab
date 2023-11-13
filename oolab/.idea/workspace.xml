@@ -97,7 +97,7 @@
       <recent name="agh.ics.oop" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RectangularMapTest.moveTest">
+  <component name="RunManager" selected="Gradle.RectangularMapTest">
     <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -227,11 +227,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RectangularMapTest.moveTest" />
         <item itemvalue="Gradle.RectangularMapTest" />
+        <item itemvalue="Gradle.RectangularMapTest.placeTest" />
+        <item itemvalue="Gradle.RectangularMapTest.moveTest" />
         <item itemvalue="Gradle.RectangularMapTest.isOccupiedTest" />
         <item itemvalue="Gradle.RectangularMapTest.objectAtTest" />
-        <item itemvalue="Gradle.RectangularMapTest.placeTest" />
       </list>
     </recent_temporary>
   </component>

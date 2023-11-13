@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RectangularMapTest {
-    private static final RectangularMap worldMap = new RectangularMap(5, 5);
 
     @Test
     public void placeTest() {
@@ -16,6 +15,7 @@ public class RectangularMapTest {
         Animal animal5 = new Animal(new Vector2d(2, 1));
         Animal animal6 = new Animal(new Vector2d(5, 4));
         Animal animal7 = new Animal(new Vector2d(-1, 0));
+        RectangularMap worldMap = new RectangularMap(5, 5);
 
         assertTrue(worldMap.place(animal1));
         assertFalse(worldMap.place(animal2));
@@ -40,6 +40,7 @@ public class RectangularMapTest {
         Vector2d notExpectedAnimal3 = new Vector2d(4, 4);
         Vector2d expectedAnimal4 = new Vector2d(2, 0);
         Vector2d notExpectedAnimal4 = new Vector2d(2, -1);
+        RectangularMap worldMap = new RectangularMap(5, 5);
 
         worldMap.place(animal1);
         worldMap.place(animal2);
@@ -78,6 +79,7 @@ public class RectangularMapTest {
         Animal animal4 = new Animal(new Vector2d(2, 1));
         Animal animal5 = new Animal(new Vector2d(5, 4));
         Animal animal6 = new Animal(new Vector2d(-1, 0));
+        RectangularMap worldMap = new RectangularMap(5, 5);
 
         worldMap.place(animal1);
         worldMap.place(animal2);
@@ -102,6 +104,7 @@ public class RectangularMapTest {
         Animal animal4 = new Animal(new Vector2d(2, 1));
         Animal animal5 = new Animal(new Vector2d(5, 4));
         Animal animal6 = new Animal(new Vector2d(-1, 0));
+        RectangularMap worldMap = new RectangularMap(5, 5);
 
         worldMap.place(animal1);
         worldMap.place(animal2);
