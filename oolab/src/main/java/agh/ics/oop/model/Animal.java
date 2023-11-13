@@ -29,6 +29,7 @@ public class Animal implements WorldElement {
         return this.position.equals(position);
     }
 
+
     public void move(MoveDirection direction, MoveValidator moveValidator) {
         switch (direction) {
             case FORWARD, BACKWARD -> {

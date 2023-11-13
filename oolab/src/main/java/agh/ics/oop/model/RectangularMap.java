@@ -16,27 +16,7 @@ public class RectangularMap extends AbstractWorldMap {
 
     @Override
     public boolean canMoveTo(Vector2d position) {
-        return (position.precedes(upperRight) && position.follows(lowerLeft)) && super.canMoveTo(position);
-    }
-
-    @Override
-    public boolean place(Animal animal) {
-        return super.place(animal);
-    }
-
-    @Override
-    public void move(Animal animal, MoveDirection direction) {
-        super.move(animal, direction);
-    }
-
-    @Override
-    public boolean isOccupied(Vector2d position) {
-        return super.isOccupied(position);
-    }
-
-    @Override
-    public WorldElement objectAt(Vector2d position) {
-        return super.objectAt(position);
+        return (lowerLeft.precedes(position) && upperRight.follows(position)) && !isOccupied(position);
     }
 
     @Override
