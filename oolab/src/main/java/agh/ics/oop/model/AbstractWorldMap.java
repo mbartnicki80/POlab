@@ -8,9 +8,6 @@ public abstract class AbstractWorldMap implements WorldMap {
     protected final Map<Vector2d, WorldElement> animals = new HashMap<>();
     MapVisualizer mapVisualizer = new MapVisualizer(this);
 
-    protected AbstractWorldMap() {
-    }
-
     public void move(Animal animal, MoveDirection direction) {
         if (isOccupied(animal.getPosition())) {
             animals.remove(animal.getPosition());
@@ -39,7 +36,7 @@ public abstract class AbstractWorldMap implements WorldMap {
         return new ArrayList<>(animals.values());
     }
 
-    public String toString(Vector2d lowerLeft, Vector2d upperRight) {
+    String toString(Vector2d lowerLeft, Vector2d upperRight) {
         return mapVisualizer.draw(lowerLeft, upperRight);
     }
 }

@@ -11,7 +11,7 @@ public class GrassField extends AbstractWorldMap {
         generateGrass(grassQuantity);
     }
 
-    public void generateGrass(int grassQuantity) {
+    private void generateGrass(int grassQuantity) {
         int n = (int) (Math.sqrt(grassQuantity*10)+1);
         RandomPositionGenerator randomPositionGenerator = new RandomPositionGenerator(n, n, grassQuantity);
         for(Vector2d grassPosition : randomPositionGenerator)
@@ -59,7 +59,6 @@ public class GrassField extends AbstractWorldMap {
         Set<Vector2d> animalsPositions = super.animals.keySet();
         calculateCorners(grassPositions);
         calculateCorners(animalsPositions);
-        System.out.println(lowerLeft);
         return super.toString(lowerLeft, upperRight);
     }
 }

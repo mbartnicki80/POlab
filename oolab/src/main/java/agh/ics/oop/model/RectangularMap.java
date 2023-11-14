@@ -14,7 +14,6 @@ public class RectangularMap extends AbstractWorldMap {
         return (lowerLeft.precedes(position) && upperRight.follows(position)) && !isOccupied(position);
     }
 
-    @Override
     public String toString() {
         return super.toString(lowerLeft, upperRight);
     }

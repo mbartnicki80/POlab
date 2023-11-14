@@ -38,7 +38,6 @@ public class World {
         GrassField worldMap = new GrassField(10);
         Simulation simulation = new Simulation(positions, directions, worldMap);
         simulation.run();
-        System.out.println(worldMap.getElements().size());
         stop();
     }
 }
