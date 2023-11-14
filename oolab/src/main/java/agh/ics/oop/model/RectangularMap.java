@@ -1,8 +1,11 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.MapVisualizer;
+
 public class RectangularMap extends AbstractWorldMap {
     private final Vector2d upperRight;
     private final Vector2d lowerLeft;
+    MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public RectangularMap(int width, int height) {
         this.upperRight = new Vector2d(width-1, height-1);
@@ -15,6 +18,6 @@ public class RectangularMap extends AbstractWorldMap {
     }
 
     public String toString() {
-        return super.toString(lowerLeft, upperRight);
+        return mapVisualizer.draw(lowerLeft, upperRight);
     }
 }

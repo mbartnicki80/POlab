@@ -1,11 +1,14 @@
 package agh.ics.oop.model;
 
+import agh.ics.oop.MapVisualizer;
+
 import java.util.*;
 
 public class GrassField extends AbstractWorldMap {
     private final Map<Vector2d, WorldElement> grass = new HashMap<>();
     private Vector2d lowerLeft = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
     private Vector2d upperRight = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
+    MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public GrassField(int grassQuantity) {
         generateGrass(grassQuantity);
@@ -59,6 +62,6 @@ public class GrassField extends AbstractWorldMap {
         Set<Vector2d> animalsPositions = super.animals.keySet();
         calculateCorners(grassPositions);
         calculateCorners(animalsPositions);
-        return super.toString(lowerLeft, upperRight);
+        return mapVisualizer.draw(lowerLeft, upperRight);
     }
 }
