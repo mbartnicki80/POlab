@@ -6,8 +6,8 @@ import java.util.*;
 
 public class GrassField extends AbstractWorldMap {
     private final Map<Vector2d, WorldElement> grass = new HashMap<>();
-    private Vector2d lowerLeft = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
-    private Vector2d upperRight = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
+    private Vector2d lowerLeft;
+    private Vector2d upperRight;
     MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public GrassField(int grassQuantity) {
@@ -60,6 +60,8 @@ public class GrassField extends AbstractWorldMap {
     public String toString() {
         Set<Vector2d> grassPositions = grass.keySet();
         Set<Vector2d> animalsPositions = super.animals.keySet();
+        lowerLeft = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
+        upperRight = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
         calculateCorners(grassPositions);
         calculateCorners(animalsPositions);
         return mapVisualizer.draw(lowerLeft, upperRight);
