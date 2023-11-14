@@ -23,19 +23,6 @@ public class GrassField extends AbstractWorldMap {
         return !isOccupied(position);
     }
 
-    @Override
-    public boolean place(Animal animal) {
-        if (canMoveTo(animal.getPosition()))
-            return super.place(animal);
-        return false;
-    }
-
-    @Override
-    public void move(Animal animal, MoveDirection direction) {
-        if (!isOccupiedByGrass(animal.getPosition()))
-            super.move(animal, direction);
-    }
-
     private boolean isOccupiedByGrass(Vector2d position) {
         return grass.containsKey(position);
     }
