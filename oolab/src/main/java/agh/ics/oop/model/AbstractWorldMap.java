@@ -1,11 +1,8 @@
 package agh.ics.oop.model;
-
-import agh.ics.oop.MapVisualizer;
-
 import java.util.*;
 
 public abstract class AbstractWorldMap implements WorldMap {
-    protected final Map<Vector2d, WorldElement> animals = new HashMap<>();
+    protected Map<Vector2d, WorldElement> animals = new HashMap<>();
 
     public void move(Animal animal, MoveDirection direction) {
         if (isOccupied(animal.getPosition())) {
