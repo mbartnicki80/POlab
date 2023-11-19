@@ -8,7 +8,7 @@ public class GrassField extends AbstractWorldMap {
     private final Map<Vector2d, WorldElement> grass = new HashMap<>();
     private Vector2d lowerLeft;
     private Vector2d upperRight;
-    MapVisualizer mapVisualizer = new MapVisualizer(this);
+    private final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public GrassField(int grassQuantity) {
         generateGrass(grassQuantity);

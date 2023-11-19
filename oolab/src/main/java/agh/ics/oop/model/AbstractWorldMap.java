@@ -12,12 +12,14 @@ public abstract class AbstractWorldMap implements WorldMap {
         }
     }
 
-    public boolean place(Animal animal) {
-        if (canMoveTo(animal.getPosition())) {
-            animals.put(animal.getPosition(), animal);
-            return true;
+    public void place(Animal animal) throws PositionAlreadyOccupiedException {
+        try {
+            if (canMoveTo(animal.getPosition()))
+                animals.put(animal.getPosition(), animal);
+            else throw new PositionAlreadyOccupiedException(animal.getPosition());
+        } catch (PositionAlreadyOccupiedException exception) {
+            System.out.println(exception.getMessage());
         }
-        return false;
     }
 
     public boolean isOccupied(Vector2d position) {

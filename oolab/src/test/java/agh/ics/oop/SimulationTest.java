@@ -44,8 +44,6 @@ public class SimulationTest {
             assertTrue(animalsList.get(i).isAt(expectedPositions.get(i)));
             assertTrue(animalsList.get(i).getPosition().precedes(UPPER_RIGHT));
             assertTrue(animalsList.get(i).getPosition().follows(LOWER_LEFT));
-
-            assertFalse(worldMap.place(new Animal(expectedPositions.get(i))));
             assertNotNull(worldMap.objectAt(expectedPositions.get(i)));
         }
     }

@@ -5,7 +5,7 @@ import agh.ics.oop.MapVisualizer;
 public class RectangularMap extends AbstractWorldMap {
     private final Vector2d upperRight;
     private final Vector2d lowerLeft;
-    MapVisualizer mapVisualizer = new MapVisualizer(this);
+    private final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public RectangularMap(int width, int height) {
         this.upperRight = new Vector2d(width-1, height-1);

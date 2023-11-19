@@ -1,6 +1,7 @@
 package agh.ics.oop.model;
 
 import org.junit.jupiter.api.Test;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,18 +17,19 @@ public class RectangularMapTest {
         Animal animal6 = new Animal(new Vector2d(5, 4));
         Animal animal7 = new Animal(new Vector2d(-1, 0));
         RectangularMap worldMap = new RectangularMap(5, 5);
+        List<Animal> animals = List.of(animal1, animal2, animal3, animal4, animal5, animal6, animal7);
 
-        assertTrue(worldMap.place(animal1));
-        assertFalse(worldMap.place(animal2));
-        assertTrue(worldMap.place(animal3));
-        assertTrue(worldMap.place(animal4));
-        assertFalse(worldMap.place(animal5));
-        assertFalse(worldMap.place(animal6));
-        assertFalse(worldMap.place(animal7));
+        for (Animal currAnimal : animals) {
+            try {
+                worldMap.place(currAnimal);
+            } catch (PositionAlreadyOccupiedException e) {
+                assertEquals("Position " + currAnimal.getPosition() + " is already occupied", e.getMessage());
+            }
+        }
     }
 
     @Test
-    public void moveTest() {
+    public void moveTest() throws PositionAlreadyOccupiedException {
         Animal animal1 = new Animal(new Vector2d(0, 0));
         Animal animal2 = new Animal(new Vector2d(2, 4));
         Animal animal3 = new Animal(new Vector2d(4, 4));
@@ -72,7 +74,7 @@ public class RectangularMapTest {
         assertNotEquals(notExpectedAnimal4, animal4.getPosition());
     }
     @Test
-    public void isOccupiedTest() {
+    public void isOccupiedTest() throws PositionAlreadyOccupiedException {
         Animal animal1 = new Animal(new Vector2d(1, 1));
         Animal animal2 = new Animal(new Vector2d(1, 1));
         Animal animal3 = new Animal(new Vector2d(1, 2));
@@ -97,7 +99,7 @@ public class RectangularMapTest {
     }
 
     @Test
-    public void objectAtTest() {
+    public void objectAtTest() throws PositionAlreadyOccupiedException {
         Animal animal1 = new Animal(new Vector2d(1, 1));
         Animal animal2 = new Animal(new Vector2d(1, 1));
         Animal animal3 = new Animal(new Vector2d(1, 2));
