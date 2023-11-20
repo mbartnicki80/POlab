@@ -1,8 +1,11 @@
 package agh.ics.oop.model;
+import agh.ics.oop.MapVisualizer;
+
 import java.util.*;
 
 public abstract class AbstractWorldMap implements WorldMap {
     protected Map<Vector2d, WorldElement> animals = new HashMap<>();
+    private final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
     public void move(Animal animal, MoveDirection direction) {
         if (isOccupied(animal.getPosition())) {
@@ -32,5 +35,11 @@ public abstract class AbstractWorldMap implements WorldMap {
 
     public ArrayList<WorldElement> getElements() {
         return new ArrayList<>(animals.values());
+    }
+
+    @Override
+    public String toString() {
+        Boundary bounds = getCurrentBounds();
+        return mapVisualizer.draw(bounds.lowerLeft(), bounds.upperRight());
     }
 }

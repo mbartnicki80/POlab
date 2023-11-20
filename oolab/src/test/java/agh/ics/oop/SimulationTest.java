@@ -11,7 +11,7 @@ public class SimulationTest {
     private static final Vector2d LOWER_LEFT = new Vector2d(0, 0);
     private static final RectangularMap worldMap = new RectangularMap(5, 5);
     @Test
-    public void shouldSimulationWorkCorrect() {
+    public void shouldSimulationWorkCorrect() throws PositionAlreadyOccupiedException {
         List<Vector2d> positions = List.of(
                 new Vector2d(3, 4),
                 new Vector2d(0, 0),

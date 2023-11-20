@@ -16,12 +16,13 @@ public class Simulation {
         return Collections.unmodifiableList(animals);
     }
 
-    public Simulation(List<Vector2d> positions, List<MoveDirection> moves, WorldMap worldMap) {
+    public Simulation(List<Vector2d> positions, List<MoveDirection> moves, WorldMap worldMap) throws PositionAlreadyOccupiedException {
         this.moves = moves;
         this.worldMap = worldMap;
         animals = new ArrayList<>();
         for (Vector2d position : positions) {
             Animal newAnimal = new Animal(position);
+            worldMap.place(newAnimal);
             animals.add(newAnimal);
         }
 

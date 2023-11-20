@@ -1,14 +1,12 @@
 package agh.ics.oop.model;
 
-import agh.ics.oop.MapVisualizer;
-
 import java.util.*;
 
 public class GrassField extends AbstractWorldMap {
     private final Map<Vector2d, WorldElement> grass = new HashMap<>();
     private Vector2d lowerLeft;
     private Vector2d upperRight;
-    private final MapVisualizer mapVisualizer = new MapVisualizer(this);
+
 
     public GrassField(int grassQuantity) {
         generateGrass(grassQuantity);
@@ -42,12 +40,7 @@ public class GrassField extends AbstractWorldMap {
         return grass.getOrDefault(position, null);
     }
 
-    private void calculateCorners(Set<Vector2d> positions) {
-        for (Vector2d position : positions) {
-            lowerLeft = lowerLeft.lowerLeft(position);
-            upperRight = upperRight.upperRight(position);
-        }
-    }
+
 
     @Override
     public ArrayList<WorldElement> getElements() {
@@ -56,14 +49,21 @@ public class GrassField extends AbstractWorldMap {
         return elements;
     }
 
+    private void calculateCorners(Set<Vector2d> positions) {
+        for (Vector2d position : positions) {
+            lowerLeft = lowerLeft.lowerLeft(position);
+            upperRight = upperRight.upperRight(position);
+        }
+    }
+
     @Override
-    public String toString() {
+    public Boundary getCurrentBounds() {
         Set<Vector2d> grassPositions = grass.keySet();
         Set<Vector2d> animalsPositions = super.animals.keySet();
         lowerLeft = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
         upperRight = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
         calculateCorners(grassPositions);
         calculateCorners(animalsPositions);
-        return mapVisualizer.draw(lowerLeft, upperRight);
+        return new Boundary(lowerLeft, upperRight);
     }
 }

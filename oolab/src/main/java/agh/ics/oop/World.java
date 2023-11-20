@@ -1,8 +1,5 @@
 package agh.ics.oop;
-import agh.ics.oop.model.GrassField;
-import agh.ics.oop.model.MoveDirection;
-import agh.ics.oop.model.RectangularMap;
-import agh.ics.oop.model.Vector2d;
+import agh.ics.oop.model.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,7 +26,7 @@ public class World {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PositionAlreadyOccupiedException {
         start();
         List<MoveDirection> directions;
         directions = OptionsParser.convertStringToMoveDirection(args);
