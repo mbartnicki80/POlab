@@ -23,7 +23,8 @@ public class Simulation {
         for (Vector2d position : positions) {
             Animal newAnimal = new Animal(position);
             worldMap.place(newAnimal);
-            animals.add(newAnimal);
+            if (worldMap.objectAt(position) instanceof Animal)
+                animals.add(newAnimal);
         }
 
     }
@@ -34,7 +35,6 @@ public class Simulation {
         for (int i=0; i<moves.size(); i++) {
             Animal animal = animals.get(i % animalsSize);
             worldMap.move(animal, moves.get(i));
-            System.out.println(worldMap);
         }
     }
 }
