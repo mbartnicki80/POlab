@@ -27,16 +27,21 @@ public class World {
     }
 
     public static void main(String[] args) {
-        start();
-        List<MoveDirection> directions;
-        directions = OptionsParser.convertStringToMoveDirection(args);
-        ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 4)));
-        //RectangularMap worldMap = new RectangularMap(5, 5);
-        GrassField worldMap = new GrassField(10);
-        ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
-        worldMap.addObserver(consoleMapDisplay);
-        Simulation simulation = new Simulation(positions, directions, worldMap);
-        simulation.run();
-        stop();
+        try {
+            start();
+            List<MoveDirection> directions;
+            directions = OptionsParser.convertStringToMoveDirection(args);
+            ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 4)));
+            //RectangularMap worldMap = new RectangularMap(5, 5);
+            GrassField worldMap = new GrassField(10);
+            ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
+            worldMap.addObserver(consoleMapDisplay);
+            Simulation simulation = new Simulation(positions, directions, worldMap);
+            simulation.run();
+            stop();
+        } catch(IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            stop();
+        }
     }
 }
