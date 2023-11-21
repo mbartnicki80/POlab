@@ -22,8 +22,12 @@ public class Simulation {
         animals = new ArrayList<>();
         for (Vector2d position : positions) {
             Animal newAnimal = new Animal(position);
-            if (worldMap.place(newAnimal))
+            try {
+                worldMap.place(newAnimal);
                 animals.add(newAnimal);
+            } catch (PositionAlreadyOccupiedException e) {
+                System.out.println(e.getMessage());
+            }
         }
 
     }
@@ -34,7 +38,6 @@ public class Simulation {
         for (int i=0; i<moves.size(); i++) {
             Animal animal = animals.get(i % animalsSize);
             worldMap.move(animal, moves.get(i));
-            System.out.println(worldMap);
         }
     }
 }

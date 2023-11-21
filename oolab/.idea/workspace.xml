@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="optimized AbstractWorldMap">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
+    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="fixed Tests,&#10;fixed throwing exception in AbstractWorldMap">
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -70,7 +67,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab5&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab6&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -86,6 +83,7 @@
       <recent name="C:\Users\Barniol\PO_2023_WTO1300_BARTNICKI\oolab\src\main\java\agh\ics\oop" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="agh.ics.oop.model" />
       <recent name="agh.ics.oop" />
     </key>
   </component>
@@ -93,7 +91,7 @@
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
       <module name="oolab.main" />
-      <option name="PROGRAM_PARAMETERS" value="f b r l f f r r f f f f f f f f" />
+      <option name="PROGRAM_PARAMETERS" value="a" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="agh.ics.oop.*" />
@@ -152,6 +150,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="RectangularMapTest.moveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.model.RectangularMapTest.moveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="SimulationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -176,44 +198,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Vector2dTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.Vector2dTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.RectangularMapTest" />
-      <item itemvalue="Gradle.MapDirectionTest" />
-      <item itemvalue="Gradle.Vector2dTest" />
+      <item itemvalue="Gradle.RectangularMapTest.moveTest" />
       <item itemvalue="Gradle.SimulationTest" />
+      <item itemvalue="Gradle.MapDirectionTest" />
+      <item itemvalue="Gradle.RectangularMapTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RectangularMapTest" />
         <item itemvalue="Application.World" />
+        <item itemvalue="Gradle.RectangularMapTest.moveTest" />
         <item itemvalue="Gradle.SimulationTest" />
         <item itemvalue="Gradle.MapDirectionTest" />
-        <item itemvalue="Gradle.Vector2dTest" />
+        <item itemvalue="Gradle.RectangularMapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +256,15 @@
       <workItem from="1699306402315" duration="801000" />
       <workItem from="1699957391041" duration="237000" />
       <workItem from="1699963419804" duration="21000" />
-      <workItem from="1699965659804" duration="300000" />
+      <workItem from="1699965659804" duration="778000" />
+      <workItem from="1699966483920" duration="2043000" />
+      <workItem from="1699973555007" duration="45000" />
+      <workItem from="1700408167854" duration="3000" />
+      <workItem from="1700431995873" duration="8414000" />
+      <workItem from="1700490073562" duration="2448000" />
+      <workItem from="1700492954564" duration="164000" />
+      <workItem from="1700559485868" duration="2839000" />
+      <workItem from="1700570160220" duration="93000" />
     </task>
     <task id="LOCAL-00001" summary="Removed old run method, edited Vector2d">
       <option name="closed" value="true" />
@@ -364,7 +370,63 @@
       <option name="project" value="LOCAL" />
       <updated>1699306121632</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="optimized AbstractWorldMap">
+      <option name="closed" value="true" />
+      <created>1699966132317</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699966132317</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added exception to OptionsParser">
+      <option name="closed" value="true" />
+      <created>1700437056469</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700437056469</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added PositionAlreadyOccupiedException,&#10;WorldMap place method throws PositionAlreadyOccupiedException">
+      <option name="closed" value="true" />
+      <created>1700438231134</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700438231134</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added Boundary record,&#10;added getCurrentBounds in WorldMap,&#10;changed toString method in WorldMap">
+      <option name="closed" value="true" />
+      <created>1700439918026</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700439918026</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added MapChangeListener">
+      <option name="closed" value="true" />
+      <created>1700440443411</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700440443411</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added ConsoleMapDisplay class,&#10;added ConsoleMapDisplay observer to WorldMap">
+      <option name="closed" value="true" />
+      <created>1700492507268</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700492507268</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixed Tests,&#10;fixed throwing exception in AbstractWorldMap">
+      <option name="closed" value="true" />
+      <created>1700560738566</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700560738566</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +469,14 @@
     <MESSAGE value="finished RectangularMap, made changes in Animal class" />
     <MESSAGE value="Simulation now uses WorldMap, changed SimulationTest" />
     <MESSAGE value="made visual changes in code" />
-    <option name="LAST_COMMIT_MESSAGE" value="made visual changes in code" />
+    <MESSAGE value="optimized AbstractWorldMap" />
+    <MESSAGE value="added exception to OptionsParser" />
+    <MESSAGE value="added PositionAlreadyOccupiedException,&#10;WorldMap place method throws PositionAlreadyOccupiedException" />
+    <MESSAGE value="added Boundary record,&#10;added getCurrentBounds in WorldMap,&#10;changed toString method in WorldMap" />
+    <MESSAGE value="added MapChangeListener" />
+    <MESSAGE value="added ConsoleMapDisplay class,&#10;added ConsoleMapDisplay observer to WorldMap" />
+    <MESSAGE value="fixed Tests,&#10;fixed throwing exception in AbstractWorldMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed Tests,&#10;fixed throwing exception in AbstractWorldMap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -17,7 +17,7 @@ public class SimulationTest {
                 new Vector2d(0, 0),
                 new Vector2d(2, 2)
         );
-        String [] moves = {"f", "b", "f", "k", "l", "l", "a", "R", "r", "f", "f"};
+        String [] moves = {"f", "b", "f", "l", "l", "r", "f", "f"};
         List<MoveDirection> expectedMoves = List.of(
                 MoveDirection.FORWARD,
                 MoveDirection.BACKWARD,
@@ -44,8 +44,6 @@ public class SimulationTest {
             assertTrue(animalsList.get(i).isAt(expectedPositions.get(i)));
             assertTrue(animalsList.get(i).getPosition().precedes(UPPER_RIGHT));
             assertTrue(animalsList.get(i).getPosition().follows(LOWER_LEFT));
-
-            assertFalse(worldMap.place(new Animal(expectedPositions.get(i))));
             assertNotNull(worldMap.objectAt(expectedPositions.get(i)));
         }
     }
