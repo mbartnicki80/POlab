@@ -11,13 +11,13 @@ public class SimulationTest {
     private static final Vector2d LOWER_LEFT = new Vector2d(0, 0);
     private static final RectangularMap worldMap = new RectangularMap(5, 5);
     @Test
-    public void shouldSimulationWorkCorrect() throws PositionAlreadyOccupiedException {
+    public void shouldSimulationWorkCorrect() {
         List<Vector2d> positions = List.of(
                 new Vector2d(3, 4),
                 new Vector2d(0, 0),
                 new Vector2d(2, 2)
         );
-        String [] moves = {"f", "b", "f", "k", "l", "l", "a", "R", "r", "f", "f"};
+        String [] moves = {"f", "b", "f", "l", "l", "r", "f", "f"};
         List<MoveDirection> expectedMoves = List.of(
                 MoveDirection.FORWARD,
                 MoveDirection.BACKWARD,

@@ -26,7 +26,7 @@ public class World {
         }
     }
 
-    public static void main(String[] args) throws PositionAlreadyOccupiedException {
+    public static void main(String[] args) {
         start();
         List<MoveDirection> directions;
         directions = OptionsParser.convertStringToMoveDirection(args);

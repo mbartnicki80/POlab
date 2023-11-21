@@ -29,7 +29,7 @@ public class RectangularMapTest {
     }
 
     @Test
-    public void moveTest() throws PositionAlreadyOccupiedException {
+    public void moveTest() {
         Animal animal1 = new Animal(new Vector2d(0, 0));
         Animal animal2 = new Animal(new Vector2d(2, 4));
         Animal animal3 = new Animal(new Vector2d(4, 4));
@@ -43,11 +43,15 @@ public class RectangularMapTest {
         Vector2d expectedAnimal4 = new Vector2d(2, 0);
         Vector2d notExpectedAnimal4 = new Vector2d(2, -1);
         RectangularMap worldMap = new RectangularMap(5, 5);
+        List<Animal> animals = List.of(animal1, animal2, animal3, animal4);
 
-        worldMap.place(animal1);
-        worldMap.place(animal2);
-        worldMap.place(animal3);
-        worldMap.place(animal4);
+        for (Animal currAnimal : animals) {
+            try {
+                worldMap.place(currAnimal);
+            } catch (PositionAlreadyOccupiedException e) {
+                assertEquals("Position " + currAnimal.getPosition() + " is already occupied", e.getMessage());
+            }
+        }
 
         worldMap.move(animal1, MoveDirection.LEFT);
         worldMap.move(animal1, MoveDirection.FORWARD);
@@ -74,7 +78,7 @@ public class RectangularMapTest {
         assertNotEquals(notExpectedAnimal4, animal4.getPosition());
     }
     @Test
-    public void isOccupiedTest() throws PositionAlreadyOccupiedException {
+    public void isOccupiedTest() {
         Animal animal1 = new Animal(new Vector2d(1, 1));
         Animal animal2 = new Animal(new Vector2d(1, 1));
         Animal animal3 = new Animal(new Vector2d(1, 2));
@@ -82,13 +86,15 @@ public class RectangularMapTest {
         Animal animal5 = new Animal(new Vector2d(5, 4));
         Animal animal6 = new Animal(new Vector2d(-1, 0));
         RectangularMap worldMap = new RectangularMap(5, 5);
+        List<Animal> animals = List.of(animal1, animal2, animal3, animal4, animal5, animal6);
 
-        worldMap.place(animal1);
-        worldMap.place(animal2);
-        worldMap.place(animal3);
-        worldMap.place(animal4);
-        worldMap.place(animal5);
-        worldMap.place(animal6);
+        for (Animal currAnimal : animals) {
+            try {
+                worldMap.place(currAnimal);
+            } catch (PositionAlreadyOccupiedException e) {
+                assertEquals("Position " + currAnimal.getPosition() + " is already occupied", e.getMessage());
+            }
+        }
 
         assertTrue(worldMap.isOccupied(animal1.getPosition()));
         assertTrue(worldMap.isOccupied(animal2.getPosition()));
@@ -99,7 +105,7 @@ public class RectangularMapTest {
     }
 
     @Test
-    public void objectAtTest() throws PositionAlreadyOccupiedException {
+    public void objectAtTest() {
         Animal animal1 = new Animal(new Vector2d(1, 1));
         Animal animal2 = new Animal(new Vector2d(1, 1));
         Animal animal3 = new Animal(new Vector2d(1, 2));
@@ -107,13 +113,15 @@ public class RectangularMapTest {
         Animal animal5 = new Animal(new Vector2d(5, 4));
         Animal animal6 = new Animal(new Vector2d(-1, 0));
         RectangularMap worldMap = new RectangularMap(5, 5);
+        List<Animal> animals = List.of(animal1, animal2, animal3, animal4, animal5, animal6);
 
-        worldMap.place(animal1);
-        worldMap.place(animal2);
-        worldMap.place(animal3);
-        worldMap.place(animal4);
-        worldMap.place(animal5);
-        worldMap.place(animal6);
+        for (Animal currAnimal : animals) {
+            try {
+                worldMap.place(currAnimal);
+            } catch (PositionAlreadyOccupiedException e) {
+                assertEquals("Position " + currAnimal.getPosition() + " is already occupied", e.getMessage());
+            }
+        }
 
         assertNotNull(worldMap.objectAt(animal1.getPosition()));
         assertNotNull(worldMap.objectAt(animal2.getPosition()));

@@ -16,15 +16,18 @@ public class Simulation {
         return Collections.unmodifiableList(animals);
     }
 
-    public Simulation(List<Vector2d> positions, List<MoveDirection> moves, WorldMap worldMap) throws PositionAlreadyOccupiedException {
+    public Simulation(List<Vector2d> positions, List<MoveDirection> moves, WorldMap worldMap) {
         this.moves = moves;
         this.worldMap = worldMap;
         animals = new ArrayList<>();
         for (Vector2d position : positions) {
             Animal newAnimal = new Animal(position);
-            worldMap.place(newAnimal);
-            if (worldMap.objectAt(position) instanceof Animal)
+            try {
+                worldMap.place(newAnimal);
                 animals.add(newAnimal);
+            } catch (PositionAlreadyOccupiedException e) {
+                System.out.println(e.getMessage());
+            }
         }
 
     }

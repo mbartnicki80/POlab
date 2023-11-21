@@ -39,15 +39,11 @@ public abstract class AbstractWorldMap implements WorldMap {
     }
 
     public void place(Animal animal) throws PositionAlreadyOccupiedException {
-        try {
-            if (canMoveTo(animal.getPosition())) {
-                animals.put(animal.getPosition(), animal);
-                mapChanged("Zwierze zostalo umieszczone na pozycji: " + animal.getPosition());
-            }
-            else throw new PositionAlreadyOccupiedException(animal.getPosition());
-        } catch (PositionAlreadyOccupiedException exception) {
-            System.out.println(exception.getMessage());
+        if (canMoveTo(animal.getPosition())) {
+            animals.put(animal.getPosition(), animal);
+            mapChanged("Zwierze zostalo umieszczone na pozycji: " + animal.getPosition());
         }
+        else throw new PositionAlreadyOccupiedException(animal.getPosition());
     }
 
     public boolean isOccupied(Vector2d position) {
