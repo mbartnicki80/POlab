@@ -6,10 +6,12 @@ public class GrassField extends AbstractWorldMap {
     private final Map<Vector2d, WorldElement> grass = new HashMap<>();
     private Vector2d lowerLeft;
     private Vector2d upperRight;
+    private final int ID;
 
 
     public GrassField(int grassQuantity) {
         generateGrass(grassQuantity);
+        this.ID = ++ID_counter;
     }
 
     private void generateGrass(int grassQuantity) {
@@ -61,5 +63,10 @@ public class GrassField extends AbstractWorldMap {
         calculateCorners(grassPositions);
         calculateCorners(animalsPositions);
         return new Boundary(lowerLeft, upperRight);
+    }
+
+    @Override
+    public int getID() {
+        return ID;
     }
 }
