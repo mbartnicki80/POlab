@@ -19,17 +19,13 @@ public class GrassField extends AbstractWorldMap {
             grass.put(grassPosition, new Grass(grassPosition));
     }
 
-    @Override
-    public boolean canMoveTo(Vector2d position) {
-        return !isOccupied(position);
-    }
-
     private boolean isOccupiedByGrass(Vector2d position) {
         return grass.containsKey(position);
     }
+
     @Override
     public boolean isOccupied(Vector2d position) {
-        return (super.isOccupied(position) || isOccupiedByGrass(position));
+        return (super.isOccupiedByAnimal(position) || isOccupiedByGrass(position));
     }
 
     @Override

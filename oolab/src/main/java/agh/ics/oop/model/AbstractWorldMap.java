@@ -5,6 +5,7 @@ import java.util.*;
 
 public abstract class AbstractWorldMap implements WorldMap {
     protected Map<Vector2d, WorldElement> animals = new HashMap<>();
+    protected int ID = 0;
     private final List<MapChangeListener> observers = new ArrayList<>();
     private final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
@@ -20,6 +21,11 @@ public abstract class AbstractWorldMap implements WorldMap {
         for (MapChangeListener observer : observers) {
             observer.mapChanged(this, message);
         }
+    }
+
+    @Override
+    public boolean canMoveTo(Vector2d position) {
+        return !isOccupiedByAnimal(position);
     }
 
     public void move(Animal animal, MoveDirection direction) {
@@ -39,16 +45,14 @@ public abstract class AbstractWorldMap implements WorldMap {
     }
 
     public void place(Animal animal) throws PositionAlreadyOccupiedException {
-        if (canMoveTo(animal.getPosition())) {
+        if (!isOccupied(animal.getPosition())) {
             animals.put(animal.getPosition(), animal);
             mapChanged("Zwierze zostalo umieszczone na pozycji: " + animal.getPosition());
         }
         else throw new PositionAlreadyOccupiedException(animal.getPosition());
     }
 
-    public boolean isOccupied(Vector2d position) {
-        return animals.containsKey(position);
-    }
+    protected boolean isOccupiedByAnimal(Vector2d position) { return animals.containsKey(position); }
 
     public WorldElement objectAt(Vector2d position) {
         return animals.getOrDefault(position, null);
@@ -56,6 +60,11 @@ public abstract class AbstractWorldMap implements WorldMap {
 
     public ArrayList<WorldElement> getElements() {
         return new ArrayList<>(animals.values());
+    }
+
+    @Override
+    public int getID() {
+        return ID;
     }
 
     @Override
