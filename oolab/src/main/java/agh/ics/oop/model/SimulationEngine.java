@@ -4,7 +4,7 @@ import agh.ics.oop.Simulation;
 
 import java.util.List;
 
-public class SimulationEngine {
+public class SimulationEngine implements Runnable {
     private final List<Simulation> simulations;
 
     public SimulationEngine(List<Simulation> simulations) {
@@ -18,18 +18,23 @@ public class SimulationEngine {
     }
 
     public synchronized void runAsync() {
-        for (Simulation simulation : simulations) {
-            RunnableSimulation runnableSimulation = new RunnableSimulation(simulation);
-            Thread thread = new Thread(runnableSimulation);
+        /*for (Simulation simulation : simulations) {
             thread.start();
+        }*/
+    }
+
+    @Override
+    public void run() {
+        for (Simulation simulation : simulations) {
+            simulation.run();
         }
     }
 
-    private record RunnableSimulation(Simulation simulation) implements Runnable {
+    /*private record RunnableSimulation(Simulation simulation) implements Runnable {
         @Override
             public synchronized void run() {
                 simulation.run();
             }
-        }
+        }*/
 
 }

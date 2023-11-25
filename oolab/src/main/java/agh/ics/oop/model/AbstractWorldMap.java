@@ -5,7 +5,8 @@ import java.util.*;
 
 public abstract class AbstractWorldMap implements WorldMap {
     protected Map<Vector2d, WorldElement> animals = new HashMap<>();
-    protected int ID_counter = 0;
+    protected final int ID;
+
     private final List<MapChangeListener> observers = new ArrayList<>();
     private final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
@@ -15,6 +16,10 @@ public abstract class AbstractWorldMap implements WorldMap {
 
     public void removeObserver(MapChangeListener observer) {
         observers.remove(observer);
+    }
+
+    protected AbstractWorldMap(int ID) {
+        this.ID = ID;
     }
 
     protected void mapChanged(String message) {
@@ -66,5 +71,10 @@ public abstract class AbstractWorldMap implements WorldMap {
     public String toString() {
         Boundary bounds = getCurrentBounds();
         return mapVisualizer.draw(bounds.lowerLeft(), bounds.upperRight());
+    }
+
+    @Override
+    public int getID() {
+        return ID;
     }
 }
