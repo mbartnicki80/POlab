@@ -2,10 +2,12 @@ package agh.ics.oop.model;
 
 import agh.ics.oop.Simulation;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class SimulationEngine implements Runnable {
+public class SimulationEngine {
     private final List<Simulation> simulations;
+    private final List<Thread> simulationThreads = new ArrayList<>();
 
     public SimulationEngine(List<Simulation> simulations) {
         this.simulations = simulations;
@@ -17,24 +19,30 @@ public class SimulationEngine implements Runnable {
         }
     }
 
-    public synchronized void runAsync() {
-        /*for (Simulation simulation : simulations) {
-            thread.start();
-        }*/
+    public void runAsync() {
+
+        for (Simulation simulation : simulations)
+            simulationThreads.add(new Thread(simulation));
+
+        for (Thread simulationThread : simulationThreads)
+            simulationThread.start();
+
     }
 
-    @Override
+    public void awaitSimulationsEnd() {
+        for (Thread simulationThread : simulationThreads)
+            try {
+                simulationThread.join();
+            } catch (InterruptedException e) {
+                System.out.println("Watek zostal przerwany");
+                return;
+            }
+    }
+
+    /*@Override
     public void run() {
         for (Simulation simulation : simulations) {
             simulation.run();
         }
-    }
-
-    /*private record RunnableSimulation(Simulation simulation) implements Runnable {
-        @Override
-            public synchronized void run() {
-                simulation.run();
-            }
-        }*/
-
+    }*/
 }

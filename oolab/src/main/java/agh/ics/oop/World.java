@@ -15,16 +15,11 @@ public class World {
         System.out.println("System zakonczyl dzialanie");
     }
 
-    static void run(MoveDirection[] directions) {
-        for (MoveDirection direction : directions) {
-            switch (direction) {
-                case FORWARD -> System.out.println("Zwierzak idzie do przodu");
-                case BACKWARD -> System.out.println("Zwierzak idzie do tylu");
-                case RIGHT -> System.out.println("Zwierzak skreca w prawo");
-                case LEFT -> System.out.println("Zwierzak skreca w lewo");
-            }
+    /*private void generateSimulations(int n) {
+        for (int i=0; i<n; i++) {
+
         }
-    }
+    }*/
 
     public static void main(String[] args) {
         try {
@@ -39,13 +34,11 @@ public class World {
             worldMap2.addObserver(consoleMapDisplay);
             Simulation simulation1 = new Simulation(positions, directions, worldMap1);
             Simulation simulation2 = new Simulation(positions, directions, worldMap2);
-            //simulation.run();
             ArrayList<Simulation> simulations = new ArrayList<>(Arrays.asList(simulation1, simulation2));
             SimulationEngine multipleSimulations = new SimulationEngine(simulations);
-            //Thread engineThread = new Thread(multipleSimulations);
-            multipleSimulations.runSync();
-            //multipleSimulations.runAsync();
-            //engineThread.start();
+            //multipleSimulations.runSync();
+            multipleSimulations.runAsync();
+            multipleSimulations.awaitSimulationsEnd();
             stop();
         } catch(IllegalArgumentException e) {
             System.out.println(e.getMessage());
