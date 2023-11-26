@@ -1,9 +1,7 @@
 package agh.ics.oop;
 import agh.ics.oop.model.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class World {
 
@@ -15,18 +13,12 @@ public class World {
         System.out.println("System zakonczyl dzialanie");
     }
 
-    /*private void generateSimulations(int n) {
-        for (int i=0; i<n; i++) {
-
-        }
-    }*/
-
     public static void main(String[] args) {
         try {
             start();
             List<MoveDirection> directions;
             directions = OptionsParser.convertStringToMoveDirection(args);
-            ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 3), new Vector2d(3, 4)));
+            /*ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 3), new Vector2d(3, 4)));
             RectangularMap worldMap1 = new RectangularMap(5, 5, 1);
             GrassField worldMap2 = new GrassField(10, 2);
             ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
@@ -34,7 +26,11 @@ public class World {
             worldMap2.addObserver(consoleMapDisplay);
             Simulation simulation1 = new Simulation(positions, directions, worldMap1);
             Simulation simulation2 = new Simulation(positions, directions, worldMap2);
-            ArrayList<Simulation> simulations = new ArrayList<>(Arrays.asList(simulation1, simulation2));
+            ArrayList<Simulation> simulations = new ArrayList<>(Arrays.asList(simulation1, simulation2));*/
+            GenerateSimulations generatedSimulations = new GenerateSimulations(directions, 100);
+            List<Simulation> simulations = new ArrayList<>();
+            for (Simulation generatedSimulation : generatedSimulations)
+                simulations.add(generatedSimulation);
             SimulationEngine multipleSimulations = new SimulationEngine(simulations);
             //multipleSimulations.runSync();
             multipleSimulations.runAsync();

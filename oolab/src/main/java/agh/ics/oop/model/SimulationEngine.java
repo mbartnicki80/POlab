@@ -38,11 +38,4 @@ public class SimulationEngine {
                 return;
             }
     }
-
-    /*@Override
-    public void run() {
-        for (Simulation simulation : simulations) {
-            simulation.run();
-        }
-    }*/
 }
