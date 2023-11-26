@@ -33,7 +33,8 @@ public class World {
                 simulations.add(generatedSimulation);
             SimulationEngine multipleSimulations = new SimulationEngine(simulations);
             //multipleSimulations.runSync();
-            multipleSimulations.runAsync();
+            //multipleSimulations.runAsync();
+            multipleSimulations.runAsyncInThreadPool();
             multipleSimulations.awaitSimulationsEnd();
             stop();
         } catch(IllegalArgumentException e) {
