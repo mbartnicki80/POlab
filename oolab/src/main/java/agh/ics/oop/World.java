@@ -18,9 +18,15 @@ public class World {
             start();
             List<MoveDirection> directions;
             directions = OptionsParser.convertStringToMoveDirection(args);
+<<<<<<< HEAD
             /*ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 3), new Vector2d(3, 4)));
             RectangularMap worldMap1 = new RectangularMap(5, 5, 1);
             GrassField worldMap2 = new GrassField(10, 2);
+=======
+            ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(2, 2), new Vector2d(3, 4)));
+            //RectangularMap worldMap = new RectangularMap(5, 5);
+            GrassField worldMap = new GrassField(10);
+>>>>>>> c87b539a4a29eb18e35af89a3d470a73884670f0
             ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
             worldMap1.addObserver(consoleMapDisplay);
             worldMap2.addObserver(consoleMapDisplay);
