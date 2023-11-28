@@ -5,6 +5,8 @@ import java.util.*;
 
 public abstract class AbstractWorldMap implements WorldMap {
     protected Map<Vector2d, WorldElement> animals = new HashMap<>();
+    protected final int ID;
+
     private final List<MapChangeListener> observers = new ArrayList<>();
     private final MapVisualizer mapVisualizer = new MapVisualizer(this);
 
@@ -16,10 +18,19 @@ public abstract class AbstractWorldMap implements WorldMap {
         observers.remove(observer);
     }
 
+    protected AbstractWorldMap(int ID) {
+        this.ID = ID;
+    }
+
     protected void mapChanged(String message) {
         for (MapChangeListener observer : observers) {
             observer.mapChanged(this, message);
         }
+    }
+
+    @Override
+    public boolean canMoveTo(Vector2d position) {
+        return !(objectAt(position) instanceof Animal);
     }
 
     public void move(Animal animal, MoveDirection direction) {
@@ -46,9 +57,7 @@ public abstract class AbstractWorldMap implements WorldMap {
         else throw new PositionAlreadyOccupiedException(animal.getPosition());
     }
 
-    public boolean isOccupied(Vector2d position) {
-        return animals.containsKey(position);
-    }
+    public boolean isOccupied(Vector2d position) { return animals.containsKey(position); }
 
     public WorldElement objectAt(Vector2d position) {
         return animals.getOrDefault(position, null);
@@ -62,5 +71,10 @@ public abstract class AbstractWorldMap implements WorldMap {
     public String toString() {
         Boundary bounds = getCurrentBounds();
         return mapVisualizer.draw(bounds.lowerLeft(), bounds.upperRight());
+    }
+
+    @Override
+    public int getID() {
+        return ID;
     }
 }

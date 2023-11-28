@@ -7,8 +7,8 @@ public class GrassField extends AbstractWorldMap {
     private Vector2d lowerLeft;
     private Vector2d upperRight;
 
-
-    public GrassField(int grassQuantity) {
+    public GrassField(int grassQuantity, int ID) {
+        super(ID);
         generateGrass(grassQuantity);
     }
 
@@ -19,14 +19,10 @@ public class GrassField extends AbstractWorldMap {
             grass.put(grassPosition, new Grass(grassPosition));
     }
 
-    @Override
-    public boolean canMoveTo(Vector2d position) {
-        return !isOccupied(position);
-    }
-
     private boolean isOccupiedByGrass(Vector2d position) {
         return grass.containsKey(position);
     }
+
     @Override
     public boolean isOccupied(Vector2d position) {
         return (super.isOccupied(position) || isOccupiedByGrass(position));
@@ -39,8 +35,6 @@ public class GrassField extends AbstractWorldMap {
             return worldElement;
         return grass.getOrDefault(position, null);
     }
-
-
 
     @Override
     public ArrayList<WorldElement> getElements() {

@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="fixed Tests,&#10;fixed throwing exception in AbstractWorldMap">
+    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="changed GenerateSimulations name to RandomSimulationGenerator">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/MapVisualizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/AbstractWorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/SimulationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +76,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab6&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab7&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Barniol/IdeaProjects/oolab/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -83,15 +93,15 @@
       <recent name="C:\Users\Barniol\PO_2023_WTO1300_BARTNICKI\oolab\src\main\java\agh\ics\oop" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="agh.ics.oop.model" />
       <recent name="agh.ics.oop" />
+      <recent name="agh.ics.oop.model" />
     </key>
   </component>
   <component name="RunManager" selected="Application.World">
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
       <module name="oolab.main" />
-      <option name="PROGRAM_PARAMETERS" value="a" />
+      <option name="PROGRAM_PARAMETERS" value="f f f f f f r l f f f f" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="agh.ics.oop.*" />
@@ -265,6 +275,17 @@
       <workItem from="1700492954564" duration="164000" />
       <workItem from="1700559485868" duration="2839000" />
       <workItem from="1700570160220" duration="93000" />
+      <workItem from="1700571328881" duration="2001000" />
+      <workItem from="1700815967759" duration="3843000" />
+      <workItem from="1700819902584" duration="112000" />
+      <workItem from="1700820156435" duration="198000" />
+      <workItem from="1700919428874" duration="8753000" />
+      <workItem from="1701004940044" duration="3440000" />
+      <workItem from="1701010731241" duration="968000" />
+      <workItem from="1701011712378" duration="399000" />
+      <workItem from="1701110872277" duration="240000" />
+      <workItem from="1701163049517" duration="2306000" />
+      <workItem from="1701172876517" duration="2098000" />
     </task>
     <task id="LOCAL-00001" summary="Removed old run method, edited Vector2d">
       <option name="closed" value="true" />
@@ -426,15 +447,97 @@
       <option name="project" value="LOCAL" />
       <updated>1700560738566</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fixed moving on GrassField">
+      <option name="closed" value="true" />
+      <created>1700816783725</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1700816783725</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added SimulationEngine class">
+      <option name="closed" value="true" />
+      <created>1700819809354</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1700819809354</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added runSync method to SimulationEngine">
+      <option name="closed" value="true" />
+      <created>1700923551273</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1700923551273</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added runAsync and awaitSimulationsEnd methods to SimulationEngine">
+      <option name="closed" value="true" />
+      <created>1700927399236</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700927399236</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added GenerateSimulations class">
+      <option name="closed" value="true" />
+      <created>1701008350975</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1701008350975</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added runAsyncInThreadPool method in SimulationEngine">
+      <option name="closed" value="true" />
+      <created>1701012088576</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1701012088576</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fixing files">
+      <option name="closed" value="true" />
+      <created>1701110929475</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1701110929475</updated>
+    </task>
+    <task id="LOCAL-00028" summary="changed SimulationsGenerator name to RandomSimulationGenerator">
+      <option name="closed" value="true" />
+      <created>1701163292726</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1701163292726</updated>
+    </task>
+    <task id="LOCAL-00029" summary="changed GenerateSimulations name to RandomSimulationGenerator">
+      <option name="closed" value="true" />
+      <created>1701163316378</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1701163316378</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="0441b45b-7acb-4fcc-a8c5-bca4655720a0" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="0441b45b-7acb-4fcc-a8c5-bca4655720a0">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -456,11 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed old run method, edited Vector2d" />
-    <MESSAGE value="MapDirectionTest added" />
-    <MESSAGE value="Some files added" />
-    <MESSAGE value="Added new Vector2d tests, optimized MapDirection methods, changed OptionsParser, added Animal class" />
-    <MESSAGE value="repaired MapDirection, finished Simulation" />
     <MESSAGE value="changed OptionsParserTest directory" />
     <MESSAGE value="added getters to Animal class, optimized run method in Simulation, added Simulation tests" />
     <MESSAGE value="fixed AnimalsList getter" />
@@ -476,7 +574,17 @@
     <MESSAGE value="added MapChangeListener" />
     <MESSAGE value="added ConsoleMapDisplay class,&#10;added ConsoleMapDisplay observer to WorldMap" />
     <MESSAGE value="fixed Tests,&#10;fixed throwing exception in AbstractWorldMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed Tests,&#10;fixed throwing exception in AbstractWorldMap" />
+    <MESSAGE value="changed main in World" />
+    <MESSAGE value="fixed moving on GrassField" />
+    <MESSAGE value="added SimulationEngine class" />
+    <MESSAGE value="added runSync method to SimulationEngine" />
+    <MESSAGE value="added runAsync and awaitSimulationsEnd methods to SimulationEngine" />
+    <MESSAGE value="added GenerateSimulations class" />
+    <MESSAGE value="added runAsyncInThreadPool method in SimulationEngine" />
+    <MESSAGE value="fixing files" />
+    <MESSAGE value="changed SimulationsGenerator name to RandomSimulationGenerator" />
+    <MESSAGE value="changed GenerateSimulations name to RandomSimulationGenerator" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed GenerateSimulations name to RandomSimulationGenerator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
