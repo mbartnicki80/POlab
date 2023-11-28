@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="added runAsyncInThreadPool method in SimulationEngine" />
+    <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="fixing files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,6 +265,7 @@
       <workItem from="1701004940044" duration="3440000" />
       <workItem from="1701010731241" duration="968000" />
       <workItem from="1701011712378" duration="399000" />
+      <workItem from="1701110872277" duration="240000" />
     </task>
     <task id="LOCAL-00001" summary="Removed old run method, edited Vector2d">
       <option name="closed" value="true" />
@@ -474,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701012088576</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixing files">
+      <option name="closed" value="true" />
+      <created>1701110929475</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1701110929475</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +523,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Some files added" />
     <MESSAGE value="Added new Vector2d tests, optimized MapDirection methods, changed OptionsParser, added Animal class" />
     <MESSAGE value="repaired MapDirection, finished Simulation" />
     <MESSAGE value="changed OptionsParserTest directory" />
@@ -539,7 +547,8 @@
     <MESSAGE value="added runAsync and awaitSimulationsEnd methods to SimulationEngine" />
     <MESSAGE value="added GenerateSimulations class" />
     <MESSAGE value="added runAsyncInThreadPool method in SimulationEngine" />
-    <option name="LAST_COMMIT_MESSAGE" value="added runAsyncInThreadPool method in SimulationEngine" />
+    <MESSAGE value="fixing files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

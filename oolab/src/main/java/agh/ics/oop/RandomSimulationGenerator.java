@@ -4,12 +4,12 @@ import agh.ics.oop.model.*;
 
 import java.util.*;
 
-public class GenerateSimulations implements Iterable<Simulation> {
+public class RandomSimulationGenerator implements Iterable<Simulation> {
     private final List<Simulation> simulations = new ArrayList<>();
     private final List<MoveDirection> directions;
     private final int simulationsQuantity;
 
-    public GenerateSimulations(List<MoveDirection> directions, int simulationsQuantity) {
+    public RandomSimulationGenerator(List<MoveDirection> directions, int simulationsQuantity) {
         this.directions = directions;
         this.simulationsQuantity = simulationsQuantity;
         generateSimulations();
