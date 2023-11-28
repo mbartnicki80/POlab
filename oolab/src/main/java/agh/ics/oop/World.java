@@ -1,5 +1,6 @@
 package agh.ics.oop;
 import agh.ics.oop.model.*;
+import javafx.application.Application;
 
 import java.util.*;
 
@@ -16,6 +17,7 @@ public class World {
     public static void main(String[] args) {
         try {
             start();
+            Application.launch(SimulationApp.class, args);
             List<MoveDirection> directions;
             directions = OptionsParser.convertStringToMoveDirection(args);
             /*ArrayList<Vector2d> positions = new ArrayList<>(Arrays.asList(new Vector2d(2, 2), new Vector2d(3, 3), new Vector2d(3, 4)));
@@ -27,7 +29,7 @@ public class World {
             Simulation simulation1 = new Simulation(positions, directions, worldMap1);
             Simulation simulation2 = new Simulation(positions, directions, worldMap2);
             ArrayList<Simulation> simulations = new ArrayList<>(Arrays.asList(simulation1, simulation2));*/
-            RandomSimulationGenerator generatedSimulations = new RandomSimulationGenerator(directions, 10);
+            RandomSimulationGenerator generatedSimulations = new RandomSimulationGenerator(directions, 1);
             List<Simulation> simulations = new ArrayList<>();
             for (Simulation generatedSimulation : generatedSimulations)
                 simulations.add(generatedSimulation);
