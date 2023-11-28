@@ -27,7 +27,7 @@ public class World {
             Simulation simulation1 = new Simulation(positions, directions, worldMap1);
             Simulation simulation2 = new Simulation(positions, directions, worldMap2);
             ArrayList<Simulation> simulations = new ArrayList<>(Arrays.asList(simulation1, simulation2));*/
-            RandomSimulationGenerator generatedSimulations = new RandomSimulationGenerator(directions, 100);
+            RandomSimulationGenerator generatedSimulations = new RandomSimulationGenerator(directions, 10);
             List<Simulation> simulations = new ArrayList<>();
             for (Simulation generatedSimulation : generatedSimulations)
                 simulations.add(generatedSimulation);

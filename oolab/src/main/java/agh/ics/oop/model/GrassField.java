@@ -25,7 +25,7 @@ public class GrassField extends AbstractWorldMap {
 
     @Override
     public boolean isOccupied(Vector2d position) {
-        return (super.isOccupiedByAnimal(position) || isOccupiedByGrass(position));
+        return (super.isOccupied(position) || isOccupiedByGrass(position));
     }
 
     @Override
@@ -35,8 +35,6 @@ public class GrassField extends AbstractWorldMap {
             return worldElement;
         return grass.getOrDefault(position, null);
     }
-
-
 
     @Override
     public ArrayList<WorldElement> getElements() {
