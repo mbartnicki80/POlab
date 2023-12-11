@@ -39,9 +39,7 @@ public class SimulationPresenter implements MapChangeListener {
         mapGrid.getRowConstraints().clear();
     }
 
-    private void drawMap() {
-        infoLabel.setText("");
-        clearGrid();
+    private void drawHeaders() {
         Boundary bounds = worldMap.getCurrentBounds();
         int lowerLeftX = bounds.lowerLeft().getXValue();
         int lowerLeftY = bounds.lowerLeft().getYValue();
@@ -54,7 +52,6 @@ public class SimulationPresenter implements MapChangeListener {
             label.setText(String.valueOf(row));
             GridPane.setHalignment(label, HPos.CENTER);
             mapGrid.add(label, 0, upperRightY-row+1);
-
         }
 
         for(int column=lowerLeftX ; column<=upperRightX; column++){
@@ -63,7 +60,6 @@ public class SimulationPresenter implements MapChangeListener {
             label.setText(String.valueOf(column));
             GridPane.setHalignment(label, HPos.CENTER);
             mapGrid.add(label, column+1-lowerLeftX, 0);
-
         }
 
         mapGrid.getRowConstraints().add(new RowConstraints(CELL_SIZE));
@@ -72,6 +68,17 @@ public class SimulationPresenter implements MapChangeListener {
         label.setText(" y\\x ");
         GridPane.setHalignment(label, HPos.CENTER);
         mapGrid.add(label, 0, 0);
+    }
+
+    private void drawMap() {
+        infoLabel.setText("");
+        clearGrid();
+        Boundary bounds = worldMap.getCurrentBounds();
+        int lowerLeftX = bounds.lowerLeft().getXValue();
+        int lowerLeftY = bounds.lowerLeft().getYValue();
+        int upperRightX = bounds.upperRight().getXValue();
+        int upperRightY = bounds.upperRight().getYValue();
+        drawHeaders();
 
         for (int i=lowerLeftX; i<=upperRightX; i++) {
             for (int j=lowerLeftY; j<=upperRightY; j++) {

@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="SimulationPresenter shows every move now">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/SimulationApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/presenter/SimulationPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/presenter/SimulationPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/simulation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/simulation.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="la8dodatkowe" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -279,6 +276,12 @@
       <workItem from="1702125829786" duration="9793000" />
       <workItem from="1702139321879" duration="3617000" />
       <workItem from="1702246893535" duration="5393000" />
+      <workItem from="1702316427971" duration="632000" />
+      <workItem from="1702373207408" duration="88000" />
+      <workItem from="1702373944483" duration="812000" />
+      <workItem from="1702375190248" duration="178000" />
+      <workItem from="1702375488724" duration="49000" />
+      <workItem from="1702377482184" duration="423000" />
     </task>
     <task id="LOCAL-00001" summary="Removed old run method, edited Vector2d">
       <option name="closed" value="true" />
