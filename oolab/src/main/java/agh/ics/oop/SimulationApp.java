@@ -1,8 +1,5 @@
 package agh.ics.oop;
 
-import agh.ics.oop.model.ConsoleMapDisplay;
-import agh.ics.oop.model.GrassField;
-import agh.ics.oop.presenter.SimulationPresenter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,13 +13,13 @@ public class SimulationApp extends Application {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getClassLoader().getResource("simulation.fxml"));
         BorderPane viewRoot = loader.load();
-        SimulationPresenter presenter = loader.getController();
+        //SimulationPresenter presenter = loader.getController();
         configureStage(primaryStage, viewRoot);
-        GrassField worldMap = new GrassField(10, 1);
-        ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
-        worldMap.addObserver(consoleMapDisplay);
-        worldMap.addObserver(presenter);
-        presenter.setWorldMap(worldMap);
+        //GrassField worldMap = new GrassField(10, 1);
+        //ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
+        //worldMap.addObserver(consoleMapDisplay);
+        //worldMap.addObserver(presenter);
+        //presenter.setWorldMap(worldMap);
         primaryStage.show();
     }
 
