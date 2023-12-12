@@ -20,7 +20,7 @@ public class SimulationApp extends Application {
         BorderPane viewRoot = loader.load(); //s
         SimulationPresenter presenter = loader.getController();
         configureStage(primaryStage, viewRoot);
-        GrassField worldMap = new GrassField(10, 1);
+        GrassField worldMap = new GrassField(10);
         ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
         worldMap.addObserver(consoleMapDisplay);
         worldMap.addObserver(presenter);
