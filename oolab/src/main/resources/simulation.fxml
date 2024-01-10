@@ -6,9 +6,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.GridPane?>
-
-
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
@@ -20,13 +17,11 @@
             <HBox spacing="10" alignment="CENTER">
                 <TextField fx:id="movementsListTextField"> </TextField>
             </HBox>
-            <Label fx:id="movementsDescriptionLabel" textAlignment="CENTER"/>
         </VBox>
     </top>
 
     <center>
         <VBox spacing="10" alignment="CENTER">
-            <GridPane fx:id="mapGrid" gridLinesVisible="true" alignment="CENTER"/>
             <Label fx:id="infoLabel" text="All animals will be living here!" textAlignment="CENTER"/>
         </VBox>
     </center>
