@@ -29,7 +29,6 @@ public class Simulation implements Runnable {
                 System.out.println(e.getMessage());
             }
         }
-
     }
 
     public void run() {

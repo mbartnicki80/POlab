@@ -6,7 +6,10 @@ import java.util.*;
 public abstract class AbstractWorldMap implements WorldMap {
     protected Map<Vector2d, WorldElement> animals = new HashMap<>();
     protected final UUID ID;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3742db90577bb2ef4e38370bf98617d1879bd0f7
     private final List<MapChangeListener> observers = new ArrayList<>();
     private final MapVisualizer mapVisualizer = new MapVisualizer(this);
 

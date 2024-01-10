@@ -14,8 +14,19 @@ public class SimulationApp extends Application {
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getClassLoader().getResource("simulation.fxml"));
+<<<<<<< HEAD
         BorderPane viewRoot = loader.load();
         configureStage(primaryStage, viewRoot);
+=======
+        BorderPane viewRoot = loader.load(); //s
+        SimulationPresenter presenter = loader.getController();
+        configureStage(primaryStage, viewRoot);
+        GrassField worldMap = new GrassField(10);
+        ConsoleMapDisplay consoleMapDisplay = new ConsoleMapDisplay();
+        worldMap.addObserver(consoleMapDisplay);
+        worldMap.addObserver(presenter);
+        presenter.setWorldMap(worldMap);
+>>>>>>> 3742db90577bb2ef4e38370bf98617d1879bd0f7
         primaryStage.show();
     }
 
