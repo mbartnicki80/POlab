@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="adb6e89a-7c1f-46c7-89ac-5d9d2d4dd579" name="Changes" comment="added SimulationViewPresenter and simulation_view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/presenter/SimulationPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/presenter/SimulationPresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -576,7 +577,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="optimized move method in Animal" />
     <MESSAGE value="added MoveValidator interface, WorldMap interface and RectangularMap class" />
     <MESSAGE value="finished RectangularMap, made changes in Animal class" />
     <MESSAGE value="Simulation now uses WorldMap, changed SimulationTest" />
@@ -601,7 +601,8 @@
     <MESSAGE value="added SimulationApp class" />
     <MESSAGE value="added SimulationPresenter class" />
     <MESSAGE value="SimulationPresenter shows every move now" />
-    <option name="LAST_COMMIT_MESSAGE" value="SimulationPresenter shows every move now" />
+    <MESSAGE value="resolving conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolving conflict" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
